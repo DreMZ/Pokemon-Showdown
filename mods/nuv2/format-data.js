@@ -1,54 +1,54 @@
 exports.BattleFormatsData = {
   luxray: {
   	inherit: true,
-		tier: 'RU'
+		tier: "RU"
 	},
 	jynx: {
 		inherit: true,
-		tier: 'NU'
+		tier: "NU"
 	},
 	gothitelle: {
 		inherit: true,
-		tier: 'OU'
+		tier: "OU"
 	},
 	archeops: {
 		inherit: true,
-		tier: 'OU'
+		tier: "OU"
 	},
 	weavile: {
 		inherit: true,
-		tier: 'OU'
+		tier: "OU"
 	},
 	politoed: {
 		inherit: true,
-		tier: 'UU'
+		tier: "UU"
 	},
 	ninetales: {
 		inherit: true,
-		tier: 'UU'
+		tier: "UU"
 	},
 	darmanitan: {
 		inherit: true,
-		tier: 'RU'
+		tier: "RU"
 	},
 	gligar: {
 		inherit: true,
-		tier: 'RU'
+		tier: "RU"
 	},
 	roselia: {
 		inherit: true,
-		tier: 'RU'
+		tier: "RU"
 	},
 	staraptor: {
 		inherit: true,
-		tier: 'UU'
+		tier: "UU"
 	},
 	gliscor: {
 		inherit: true,
-		tier: 'UU'
+		tier: "UU"
 	},
 	gastrodon: {
 		inherit: true,
-		tier: 'UU'
+		tier: "UU"
 	}
 };
