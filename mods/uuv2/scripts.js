@@ -142,6 +142,7 @@ exports.BattleScripts = {
 
 			this.data.Learnsets.sigilyph.learnset.quiverdance = ['5L0'];
 			this.data.Learnsets.sigilyph.learnset.hurricane = ['5L0'];
+			
 this.data.Learnsets.ambipom.learnset.bulletseed = ['5L0'];
 this.data.Learnsets.ambipom.learnset.rockblast = ['5L0'];
 this.data.Learnsets.ambipom.learnset.megapunch = ['5L0'];
