@@ -1,8 +1,19 @@
-exports.BattleFormats = {
+﻿exports.BattleFormats = {
 
 	// Singles
 	///////////////////////////////////////////////////////////////////
 
+	nuv2: {
+        effectType: 'Format',
+        section: 'v2 Recreation Project',
+        name: "nuv2",
+        mod: 'nuv2',
+        challengeShow: true,
+        searchShow: true,
+        isTeambuilderFormat: true,
+        ruleset: ['Pokemon', 'Standard', 'Evasion Abilities Clause', 'Team Preview'],
+        banlist: ['RU', 'Beheeyem', 'Braviary', 'Gardevoir', 'Musharna', 'Luxray', 'Roselia', 'Drizzle', 'Drought', 'Sand Rush + Torterra + Shell Smash']
+        },
 	randombattle: {
 		name: "Random Battle",
 		section: "Singles",
@@ -240,6 +251,53 @@ exports.BattleFormats = {
 		// no restrictions, for serious
 		ruleset: []
 	},
+	vgcsingles: {
+		effectType: 'Format',
+		section: 'Singles',
+		name: "VGC Singles",
+		rated: true,
+		challengeShow: true,
+		searchShow: true,
+		isTeambuilderFormat: true,
+		debug: true,
+			onBegin: function() {
+			this.debug('cutting down to 3');
+			this.p1.pokemon = this.p1.pokemon.slice(0,3);
+			this.p1.pokemonLeft = this.p1.pokemon.length;
+			this.p2.pokemon = this.p2.pokemon.slice(0,3);
+			this.p2.pokemonLeft = this.p2.pokemon.length;
+		},
+		maxForcedLevel: 50,
+		ruleset: ['Pokemon', 'Standard', 'Team Preview VGC', 'Item Clause'],
+		banlist: ['Unreleased', 'Illegal', 'Soul Dew',
+			'Mewtwo',
+			'Mew',
+			'Lugia',
+			'Ho-Oh',
+			'Celebi',
+			'Kyogre',
+			'Groudon',
+			'Rayquaza',
+			'Jirachi',
+			'Deoxys', 'Deoxys-Attack', 'Deoxys-Speed', 'Deoxys-Defense',
+			'Chatot',
+			'Dialga',
+			'Palkia',
+			'Giratina', 'Giratina-Origin',
+			'Phione',
+			'Manaphy',
+			'Darkrai',
+			'Shaymin', 'Shaymin-Sky',
+			'Arceus', 'Arceus-Bug', 'Arceus-Dark', 'Arceus-Dragon', 'Arceus-Electric', 'Arceus-Fighting', 'Arceus-Fire', 'Arceus-Flying', 'Arceus-Ghost', 'Arceus-Grass', 'Arceus-Ground', 'Arceus-Ice', 'Arceus', 'Arceus-Poison', 'Arceus-Psychic', 'Arceus-Rock', 'Arceus-Steel', 'Arceus-Water',
+			'Victini',
+			'Reshiram',
+			'Zekrom',
+			'Kyurem', 'Kyurem-Black', 'Kyurem-White',
+			'Keldeo', 'Keldeo-Resolute',
+			'Meloetta',
+			'Genesect'
+		]
+	},
 
 	// Doubles
 	///////////////////////////////////////////////////////////////////
@@ -364,9 +422,20 @@ exports.BattleFormats = {
 	// Other Metagames
 	///////////////////////////////////////////////////////////////////
 
+	randomtypingsOU: {
+        effectType: 'Format',
+        section: "Other Metagames",
+        name: "Random Typings OU",
+        mod: 'randomtypings',
+        challengeShow: true,
+        searchShow: true,
+        isTeambuilderFormat: true,
+        ruleset: ['Pokemon', 'Standard', 'Evasion Abilities Clause', 'Team Preview'],
+        banlist: ['Uber', 'Soul Dew']
+        },
 	tiershift: {
 		name: "Tier Shift",
-		section: 'OM of the Month',
+		section: "Other Metagames,
 
 		mod: 'tiershift',
 		effectType: 'Format',
