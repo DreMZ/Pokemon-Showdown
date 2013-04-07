@@ -16,7 +16,7 @@
         },
         ruv2: {
                 effectType: 'Format',
-                section:'Version 2 Tiers'
+                section:'Version 2 Tiers',
                 name: "ruv2",
                 mod: "ruv2",
                 challengeShow: true,
