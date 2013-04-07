@@ -37,7 +37,7 @@
                 isTeambuilderFormat: true,
                 rated: true,
                 ruleset: ['Pokemon', 'Standard', 'Evasion Abilities Clause', 'Team Preview','Sleep Clause'],
-                banlist: ['Archeops', 'Weavile', 'Wobbuffet', 'Chansey', 'Gothitelle', 'Alakazam', 'Blissey', 'Breloom', 'Celebi', 'Cloyster', 'Conkeldurr', 'Deoxys-Defense', 'Donphan', 'Dragonite', 'Dugtrio', 'Espeon', 'Ferrothorn', 'Forretress', 'Garchomp', 'Gengar', 'Gyarados', 'Haxorus', 'Heatran', 'Hippowdon', 'Hydreigon', 'Infernape', 'Jellicent', 'Jirachi', 'Jolteon', 'Keldeo', 'Keldeo-Resolute', 'Kyurem-Black', 'Landorus', 'Landorus-Therian', 'Latias', 'Latios', 'Lucario', 'Magnezone', 'Mamoswine', 'Metagross', 'Reuniclus', 'Rotom-Wash', 'Salamence', 'Scizor', 'Skarmory', 'Starmie', 'Tentacruel', 'Terrakion', 'Thundurus-Therian', 'Toxicroak', 'Tyranitar', 'Vaporeon', 'Venusaur', 'Volcarona', 'Drizzle ++ Swift Swim', 'Uber'],
+                banlist: ['Archeops', 'Weavile', 'BL2', 'OU', 'Uber'],
         },
 	randombattle: {
 		name: "Random Battle",
