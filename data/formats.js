@@ -435,7 +435,7 @@
         },
 	tiershift: {
 		name: "Tier Shift",
-		section: "Other Metagames,
+		section: "Other Metagames",
 
 		mod: 'tiershift',
 		effectType: 'Format',
