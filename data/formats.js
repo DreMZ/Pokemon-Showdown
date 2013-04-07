@@ -31,7 +31,7 @@
                 effectType: 'Format',
                 section:'Version 2 Tiers',
                 name: "uuv2",
-                mod: "uuv2",
+                mod: 'uuv2',
                 challengeShow: true,
                 searchShow: true,
                 isTeambuilderFormat: true,
