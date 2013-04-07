@@ -11,8 +11,8 @@
         challengeShow: true,
         searchShow: true,
         isTeambuilderFormat: true,
-        ruleset: ['Pokemon', 'Standard', 'Evasion Abilities Clause', 'Team Preview'],
-        banlist: ['RU', 'Beheeyem', 'Braviary', 'Gardevoir', 'Musharna', 'Luxray', 'Roselia', 'Drizzle', 'Drought', 'Sand Rush + Torterra + Shell Smash']
+        ruleset: ['Pokemon', 'Standard', 'Evasion Abilities Clause', 'Team Preview','Sleep Clause'],
+        banlist: ['RU','UU','Ubers','OU', 'Beheeyem', 'Braviary', 'Gardevoir', 'Musharna', 'Luxray', 'Roselia', 'Drizzle', 'Drought', 'Sand Rush + Torterra + Shell Smash']
         },
 	randombattle: {
 		name: "Random Battle",
