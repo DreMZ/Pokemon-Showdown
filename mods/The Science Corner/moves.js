@@ -1524,7 +1524,7 @@ exports.BattleMovedex = {
 	},
 	blackhole: {
                 num: -100,
-                accuracy: 110,
+                accuracy: true,
                 basePower: 90,
                 category: "Special",
                 desc: "Deals damage to one adjacent target and lowers the user's Special Attack by 2 stages.",
