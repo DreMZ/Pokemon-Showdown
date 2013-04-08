@@ -439,4 +439,104 @@ exports.BattleAbilities = {
         rating: 5,
         num: 2009
         },
+  "angerpoint": {
+        desc: "If this Pokemon, or its Substitute, is struck by a Critical Hit, its Attack is boosted to six stages.",
+        shortDesc: "If this Pokemon (not a Substitute) is hit by a critical hit, its Attack is boosted by 12.",
+        onBasePower: function(basePower, attacker, defender, move) {
+          if (move.category === "Physical" && attacker.hp <= attacker.maxhp/3) {
+            this.debug('Anger Point boost');
+            return basePower * 1.5;
+            }
+        },
+        id: "angerpoint",
+        name: "Anger Point",
+        rating: 2,
+        num: 83
+        },
+  "battlearmor": {
+        desc: "Not very effective hits do two thirds damage to this pokemon.",
+        shortDesc: "Resisted hits do 2/3 damage to this pokemon.",
+        onSourceBasePower: function(basePower, attacker, defender, move) {
+          if (this.getEffectiveness(move.type, defender) < 0) {
+            this.debug('Battle Armor Weaken');
+            return basePower*2/3;
+            }
+        },
+        id: "battlearmor",
+        name: "Battle Armor",
+        rating: 1,
+        num: 4
+        },
+ "shellarmor": {
+        desc: "Not very effective hits do two thirds damage to this pokemon.",
+        shortDesc: "Resisted hits do 2/3 damage to this pokemon.",
+        onSourceBasePower: function(basePower, attacker, defender, move) {
+          if (this.getEffectiveness(move.type, defender) < 0) {
+            this.debug('Shell Armor Weaken');
+            return basePower*2/3;
+            }
+        },
+        id: "shellarmor",
+        name: "Shell Armor",
+        rating: 1,
+        num: 75
+        },
+  "clearbody": {
+        desc: "This pokemon's stats cannot be lowered.",
+        shortDesc: "This pokemon's stats cannot be lowered.",
+        onBoost: function(boost) {
+          for (var i in boost) {
+            if (boost[i] < 0)
+            boost[i] = 0;
+            }
+        },
+        id: "clearbody",
+        name: "Clear Body",
+      rating: 2,
+      num: 29
+      },
+  "whitesmoke": {
+        desc: "This pokemon's stats cannot be lowered.",
+        shortDesc: "This pokemon's stats cannot be lowered.",
+        onBoost: function(boost) {
+          for (var i in boost) {
+            if (boost[i] < 0)
+            boost[i] = 0;
+            }
+        },
+        id: "whitesmoke",
+        name: "White Smoke",
+      rating: 2,
+      num: 73
+      },
+  "defeatist": {
+        desc: "Speed is halved when HP is less than half.",
+        shortDesc: "When this Pokemon has 1/2 or less of its max HP, its Speed is halved.",
+        onModifySpe: function(spe, pokemon) {
+          if (pokemon.hp < pokemon.maxhp/2) {
+            return spe / 2;
+            }
+        },
+        onResidual: function(pokemon) {
+        pokemon.update();
+        },
+        id: "defeatist",
+        name: "Defeatist",
+        rating: -1,
+        num: 129
+        },
+  "hypercutter": {
+        desc: "This Pokemon receives a 20% power boost for the following attacks:.",
+        shortDesc: "This Pokemon's slash-based attacks do 1.2x damage.",
+        onBasePower: function(basePower, attacker, defender, move) {
+          if (move.isPunchAttack) {
+            this.debug('Hyper Cutter boost');
+            return basePower * 12/10;
+            }
+        },
+        id: "ironfist",
+        name: "Iron Fist",
+        rating: 3,
+        num: 52
+        },
   };
