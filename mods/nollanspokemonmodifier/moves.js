@@ -1,6 +1,6 @@
 exports.BattleMovedex = {
 
-stealthrock: {
+"stealthrock": {
         inherit: true,
         effect: {
             // this is a side condition
@@ -23,7 +23,7 @@ stealthrock: {
         }
     },
 
- shadowball: {
+ "shadowball": {
         inherit: true,
         basePower: 90,
           secondary: {
@@ -52,7 +52,7 @@ stealthrock: {
     target: "normal",
     type: "Ground"
   },
-  focusblast: {
+  "focusblast": {
         inherit: true,
         accuracy: 85,
         secondary: false
@@ -78,7 +78,7 @@ stealthrock: {
         target: "self",
         type: "Psychic"
   },
-    poisonjab: {
+    "poisonjab": {
         inherit: true,
         basePower: 40,
         priority: 1,
@@ -86,11 +86,11 @@ stealthrock: {
           chance: 10
         }
   },
-  shadowpunch: {
+  "shadowpunch": {
           inherit: true,
           basePower: 75
   },
-  ironhead: {
+  "ironhead": {
           inherit: true,
           basePower: 90,
           secondary: {
@@ -116,11 +116,11 @@ stealthrock: {
                 target: "normal",
                 type: "Poison"
         },
-  sleeppowder: {
+  "sleeppowder": {
           inherit: true,
           accuracy: 80
   },
-  hypnosis: {
+  "hypnosis": {
           inherit: true,
           accuracy: 80
   },
@@ -173,9 +173,8 @@ stealthrock: {
                 accuracy: 100,
                 basePower: 80,
                 category: "Physical",
-                defensiveCategory: "Physical",
                 desc: "Deals damage to one adjacent target based on Defense instead of Attack.",
-                shortDesc: "Damages based on Defense, not Atk.",
+                shortDesc: "Damages based on Def, not Atk.",
                 id: "shieldbash",
                 isViable: true,
                 name: "Shield Bash",
@@ -248,23 +247,23 @@ stealthrock: {
         target: "self",
         type: "Steel"
   },
-   flameburst: {
+   "flameburst": {
         inherit: true,
         basePower: 40,
         priority: 1,
         secondary: false,
         }
   },
-  poisontail: {
+  "poisontail": {
           inherit: true,
           basePower: 95
   },
-  stoneedge: {
+  "stoneedge": {
           inherit: true,
           accuracy: 90,
           critRatio: 1
   },
-  hex: {
+  "hex": {
           inherit: true,
           basePower: 60
   },
@@ -290,5 +289,5 @@ stealthrock: {
                 },
                 target: "normal",
                 type: "Normal"
-        },
+        }
  }; 
