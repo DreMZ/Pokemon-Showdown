@@ -40,6 +40,18 @@
 	ruleset: ['Pokemon', 'Standard', 'Team Preview'],
 	banlist: ['Uber', 'Excadrill + Sand Rush', 'Garchomp + Mach Scale', 'Trickster']
 	},
+	TheScienceCorner: {
+        effectType: 'Format',
+        section: 'For Science!',
+        name: "TSC",
+        mod: 'TheScienceCorner',
+        challengeShow: true,
+        searchShow: true,
+        isTeambuilderFormat: true,
+        rated: true,
+        ruleset: ['Pokemon', 'Standard', 'Evasion Abilities Clause', 'Team Preview','Sleep Clause'],
+        banlist: ['Uber', 'Excadrill + Sand Rush', 'Drizzle + SwiftSwim']
+        },
 	randombattle: {
 		name: "Random Battle",
 		section: "Singles",
