@@ -37,7 +37,7 @@
 	searchShow: true,
 	isTeambuilderFormat: true,
 	debug: true,
-	ruleset: ['Pokemon', 'Standard DW', 'Team Preview'],
+	ruleset: ['Pokemon', 'Standard', 'Team Preview'],
 	banlist: ['Uber', 'Excadrill + Sand Rush', 'Garchomp + Mach Scale', 'Trickster']
 	},
 	randombattle: {
