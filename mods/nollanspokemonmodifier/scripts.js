@@ -44,7 +44,7 @@ exports.BattleScripts = {
                 this.data.Pokedex.milotic.abilities['0'] = 'Multiscale';
                 
                 this.data.Pokedex.metagross.abilities['1'] = 'Light Metal';
-                this.data.Pokedex.metagross.abilities['DW'] = 'Gravotonize';
+                this.data.Pokedex.metagross.abilities['DW'] = 'Gravitation';
                 
                 this.data.Pokedex.regirock.abilities['DW'] = 'Sand Veil';
                
@@ -97,7 +97,7 @@ exports.BattleScripts = {
                 
                 this.data.Pokedex.gothitelle.types = ["Psychic","Dark"];
                 
-                this.data.Pokedex.reuniclus.abilities['0'] = 'Gravotonize';
+                this.data.Pokedex.reuniclus.abilities['0'] = 'Gravitation';
                 
                 this.data.Pokedex.zoroark.types = ["Dark","Ghost"];
                 this.data.Pokedex.zoroark.abilities['DW'] = 'Dauntless';
