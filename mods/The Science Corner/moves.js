@@ -1521,5 +1521,25 @@ exports.BattleMovedex = {
 		},
 		target: "normal",
 		type: "Normal"
-	}
+	},
+	blackhole: {
+                num: -100,
+                accuracy: 110,
+                basePower: 90,
+                category: "Special",
+                desc: "Deals damage to one adjacent target and lowers the user's Special Attack by 2 stages.",
+                shortDesc: "Lowers the user's Sp. Atk by 1.",
+                id: "blackhole",
+                isViable: true,
+                name: "Black Hole",
+                pp: 5,
+                priority: 0,
+                self: {
+                        boosts: {
+                                spa: -1
+                        }
+                },
+                secondary: false,
+                target: "normal",
+                type: "Dark"
 };
