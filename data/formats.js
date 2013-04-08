@@ -961,8 +961,20 @@
 		effectType: 'Format',
 		challengeShow: true,
 		ruleset: ['Pokemon', 'Standard NEXT', 'Team Preview'],
-		banlist: ['Uber']
+		banlist: ['Uber']		
 	},
+//Remove tab, er, following slashes to enable
+/*
+		duskmod2: {
+		name: "DuskMod2",
+		section: "Other Metagames",
+
+		mod: 'duskmodtwo',
+		effectType: 'Format',
+		challengeShow: true,
+		ruleset: ['Pokemon', 'Standard', 'Evasion Abilities Clause', 'Team Preview'],
+		banlist: ['Uber', 'Soul Dew']
+	},*/
 	oumonotype: {
 		name: "OU Monotype",
 		section: "Other Metagames",
