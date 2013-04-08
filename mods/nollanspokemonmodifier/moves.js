@@ -124,66 +124,6 @@ exports.BattleMovedex = {
           inherit: true,
           accuracy: 80
   },
-          "blackhole": {
-                num: -100,
-                accuracy: 90,
-                basePower: 140,
-                category: "Special",
-                desc: "Deals damage to one adjacent target and lowers the user's Special Attack by 2 stages.",
-                shortDesc: "Lowers the user's Sp. Atk by 2.",
-                id: "blackhole",
-                isViable: true,
-                name: "Black Hole",
-                pp: 5,
-                priority: 0,
-                self: {
-                        boosts: {
-                                spa: -2
-                        }
-                },
-                secondary: false,
-                target: "normal",
-                type: "Dark"
-        },
-          "gammastrike": {
-                num: -101,
-                accuracy: 90,
-                basePower: 140,
-                category: "Physical",
-                desc: "Deals damage to one adjacent target and lowers the user's Attack by 2 stages.",
-                shortDesc: "Lowers the user's Atk by 2.",
-                id: "blackhole",
-                isViable: true,
-                name: "Black Hole",
-                pp: 5,
-                priority: 0,
-                self: {
-                        boosts: {
-                                atk: -2
-                        }
-                },
-                secondary: {
-                        chance: 20,
-                        Status: 'tox'
-                target: "normal",
-                type: "Poison"
-        },
-        "shieldbash": {
-                num: -102,
-                accuracy: 100,
-                basePower: 80,
-                category: "Physical",
-                desc: "Deals damage to one adjacent target based on Defense instead of Attack.",
-                shortDesc: "Damages based on Def, not Atk.",
-                id: "shieldbash",
-                isViable: true,
-                name: "Shield Bash",
-                pp: 10,
-                priority: 0,
-                secondary: false,
-                target: "normal",
-                type: "Steel"
-        },
     "lockon": {
         num: 199,
         accuracy: true,
