@@ -236,7 +236,6 @@ exports.BattleAbilities = {
         desc: "When this Pokemon enters the battlefield, it causes a 5-turn Gravity.",
         shortDesc: "On switch-in, this Pokemon summons Gravity for 5 turns.",
         this.debug("Starting Gravity");
-        onStart: function(pokemon) {
           if (this.pseudoWeather['gravity']) {
             this.removePseudoWeather('gravity', pokemon, pokemon);
         }
@@ -267,7 +266,7 @@ exports.BattleAbilities = {
   "ancientwind": {
         desc: "When this Pokemon enters the battlefield, it causes a 4-turn Tailwind.",
         shortDesc: "On switch-in, this Pokemon summons Tailwind for 4 turns.",
-        onStart: function(pokemon) {
+        onStart: function(source) {
          this.debug("Starting Tailwind");
         this.addPseudoWeather('tailwind', pokemon, pokemon);
         this.pseudoWeather['tailwind'].duration = 4;
