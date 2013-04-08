@@ -258,9 +258,9 @@ exports.BattleMovedex = {
                 category: "Physical",
                 desc: "Deals damage to one adjacent target and lowers the user's Attack by 2 stages.",
                 shortDesc: "Lowers the user's Atk by 2.",
-                id: "blackhole",
+                id: "gammastrike",
                 isViable: true,
-                name: "Black Hole",
+                name: "Gamma Strike",
                 pp: 5,
                 priority: 0,
                 self: {
