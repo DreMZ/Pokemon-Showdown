@@ -529,7 +529,7 @@ exports.BattleAbilities = {
         desc: "This Pokemon receives a 20% power boost for the following attacks:.",
         shortDesc: "This Pokemon's slash-based attacks do 1.2x damage.",
         onBasePower: function(basePower, attacker, defender, move) {
-          if (move.isPunchAttack) {
+          if (move.isSlashAttack) {
             this.debug('Hyper Cutter boost');
             return basePower * 12/10;
             }
@@ -538,5 +538,5 @@ exports.BattleAbilities = {
         name: "Iron Fist",
         rating: 3,
         num: 52
-        },
+        }
   };
