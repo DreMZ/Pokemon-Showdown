@@ -232,7 +232,7 @@ exports.BattleAbilities = {
         rating: 3,
         num: 116
   },
-  "gravotonize": {
+  "gravitation": {
         desc: "When this Pokemon enters the battlefield, it causes a 5-turn Gravity.",
         shortDesc: "On switch-in, this Pokemon summons Gravity for 5 turns.",
         this.debug("Starting Gravity");
@@ -242,8 +242,8 @@ exports.BattleAbilities = {
         this.addPseudoWeather('gravity', pokemon, pokemon);
         this.pseudoWeather['gravity'].duration = 5;
         },
-        id: "gravotonize",
-        name: "Gravotonize",
+        id: "gravitation",
+        name: "Gravitation",
         rating: 5,
         num: 2002
   },
