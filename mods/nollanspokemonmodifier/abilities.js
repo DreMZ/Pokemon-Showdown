@@ -235,21 +235,28 @@ exports.BattleAbilities = {
   "gravotonize": {
         desc: "When this Pokemon enters the battlefield, it causes a 5-turn Gravity.",
         shortDesc: "On switch-in, this Pokemon summons Gravity for 5 turns.",
-        onStart: function(source) {
-          this.setWeather('gravity');
-          this.weatherData.duration = 5;
+        this.debug("Starting Gravity");
+          if (this.pseudoWeather['gravity']) {
+            this.removePseudoWeather('gravity', pokemon, pokemon);
+        }
+        this.addPseudoWeather('gravity', pokemon, pokemon);
+        this.pseudoWeather['gravity'].duration = 5;
         },
         id: "gravotonize",
         name: "Gravotonize",
         rating: 5,
         num: 2002
   },
-  "trickster": {
-        desc: "When this Pokemon enters the battlefield, it causes a 5-turn Trick Room.",
-        shortDesc: "On switch-in, this Pokemon summons Trick Room for 5 turns.",
-        onStart: function(source) {
-          this.setWeather('trickroom');
-          this.weatherData.duration = 5;
+    "trickster" : {
+        desc: "When this Pokemon enters the battlefield, it causes a permanent Toxic Rain that can only be stopped by Air Lock, Cloud Nine or another weather condition.",
+        shortDesc: "On switch-in, this Pokemon summons Toxic Rain until another weather replaces it.",
+        onStart: function(pokemon) {
+          this.debug("Starting Trick Room");
+          if (this.pseudoWeather['trickroom']) {
+            this.removePseudoWeather('trickroom', pokemon, pokemon);
+        }
+        this.addPseudoWeather('trickroom', pokemon, pokemon);
+        this.pseudoWeather['trickroom'].duration = 5;
         },
         id: "trickster",
         name: "Trickster",
@@ -260,9 +267,9 @@ exports.BattleAbilities = {
         desc: "When this Pokemon enters the battlefield, it causes a 4-turn Tailwind.",
         shortDesc: "On switch-in, this Pokemon summons Tailwind for 4 turns.",
         onStart: function(source) {
-          this.setWeather('tailwind');
-          this.weatherData.duration = 4;
-        },
+         this.debug("Starting Tailwind");
+        this.addPseudoWeather('tailwind', pokemon, pokemon);
+        this.pseudoWeather['tailwind'].duration = 4;
         id: "ancientwind",
         name: "Ancient Wind",
         rating: 5,
@@ -410,7 +417,7 @@ exports.BattleAbilities = {
           if (attacker.hp >= attacker.maxhp) {
             this.debug('Mach Scale boost');
             onModifySpe: function(spe) {
-        return spe * 2;
+              return spe * 2;
             }
         },
         id: "marvelscale",
@@ -423,7 +430,7 @@ exports.BattleAbilities = {
         shortDesc: "Prevents Water and Flying-type foes from switching out normally.",
         onFoeModifyPokemon: function(pokemon) {
           if (pokemon.hasType('Water')) {
-          if (pokemon.hasType('Water')) {
+          else if (pokemon.hasType('Flying')) {
           pokemon.trapped = true;
           }
         },
