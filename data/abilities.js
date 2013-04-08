@@ -2714,5 +2714,142 @@ exports.BattleAbilities = {
 		// implemented in the corresponding move
 		rating: 4,
 		num: -4
-	}
+	},
+	"arcticrush": {
+              desc: "If this Pokemon is active while Hail is in effect, its speed is temporarily increased by 50%. The Pokemon is also immune to Hail damage",
+              shortDesc: "If Hail is active, this Pokemon's Speed is 1.5x. Immunity to Hail",
+              onImmunity: function(type, pokemon) {
+              if (type === 'hail') return false;
+              },
+              onModifySpe: function(spe, pokemon) {
+              if (this.isWeather('hail')) {
+              return spe * 1.5;
+              }
+        },
+        id: "arcticrush",
+        name: "Arctic Rush",
+        rating: 2,
+        num: 2000
+  	},
+  "gravitation": {
+        desc: "When this Pokemon enters the battlefield, it causes a 5-turn Gravity.",
+        shortDesc: "On switch-in, this Pokemon summons Gravity for 5 turns.",
+        this.debug("Starting Gravity");
+          if (this.pseudoWeather['gravity']) {
+            this.removePseudoWeather('gravity', pokemon, pokemon);
+        }
+        this.addPseudoWeather('gravity', pokemon, pokemon);
+        this.pseudoWeather['gravity'].duration = 5;
+        },
+        id: "gravitation",
+        name: "Gravitation",
+        rating: 5,
+        num: 2002
+  },
+    "trickster" : {
+        desc: "When this Pokemon enters the battlefield, it causes a permanent Toxic Rain that can only be stopped by Air Lock, Cloud Nine or another weather condition.",
+        shortDesc: "On switch-in, this Pokemon summons Toxic Rain until another weather replaces it.",
+        onStart: function(pokemon) {
+          this.debug("Starting Trick Room");
+          if (this.pseudoWeather['trickroom']) {
+            this.removePseudoWeather('trickroom', pokemon, pokemon);
+        }
+        this.addPseudoWeather('trickroom', pokemon, pokemon);
+        this.pseudoWeather['trickroom'].duration = 5;
+        },
+        id: "trickster",
+        name: "Trickster",
+        rating: 5,
+        num: 2003
+  },
+  "ancientwind": {
+        desc: "When this Pokemon enters the battlefield, it causes a 4-turn Tailwind.",
+        shortDesc: "On switch-in, this Pokemon summons Tailwind for 4 turns.",
+        onStart: function(source) {
+         this.debug("Starting Tailwind");
+        this.addPseudoWeather('tailwind', pokemon, pokemon);
+        this.pseudoWeather['tailwind'].duration = 4;
+        id: "ancientwind",
+        name: "Ancient Wind",
+        rating: 5,
+        num: 2004
+  },
+  "dauntless": {
+        desc: "When a Pokemon with Dauntless faints another Pokemon, its Special Attack rises by one stage.",
+        shortDesc: "This Pokemon's Special Attack is boosted by 1 if it attacks and faints another Pokemon.",
+        onSourceFaint: function(target, source, effect) {
+          if (effect && effect.effectType === 'Move') {
+            this.boost({spa:1}, source);
+            }
+        },
+        id: "dauntless",
+        name: "Dauntless",
+        rating: 4,
+        num: 2005
+  },
+  "adrenaline": {
+        desc: "When a Pokemon with Adrenaline faints another Pokemon, its Speed rises by one stage.",
+        shortDesc: "This Pokemon's Speed is boosted by 1 if it attacks and faints another Pokemon.",
+        onSourceFaint: function(target, source, effect) {
+          if (effect && effect.effectType === 'Move') {
+            this.boost({spe:1}, source);
+            }
+        },
+        id: "adrenaline",
+        name: "Adrenaline",
+        rating: 4,
+        num: 2006
+  },
+  "caution": {
+        desc: "If this Pokemon switches into an opponent with equal Offenses or higher Attack than Special Attack, this Pokemon's Defense receives a 50% boost. If this Pokemon switches into an opponent with higher Special Attack than ATtack, this Pokemon's Special Defense receive a 50% boost.",
+        shortDesc: "On switch-in, Defense or Sp. Def is boosted by 1 based on the foes' weaker Offense.",
+        onStart: function (pokemon) {
+          var foeactive = pokemon.side.foe.active;
+          var totalatk = 0;
+          var totalspa = 0;
+          for (var i=0; i<foeactive.length; i++) {
+          if (!foeactive[i] || foeactive[i].fainted) continue;
+        totalatk += foeactive[i].getStat('atk');
+        totalspa += foeactive[i].getStat('spa');
+        }
+          if (totalatk && totalatk >= totalspa) {
+          this.boost({spd:1});
+          } else if (totalspa) {
+          this.boost({def:1});
+          }
+        },
+        id: "caution",
+        name: "Caution",
+        rating: 4,
+        num: 2007
+  },
+   "machscale": {
+        desc: "Doubles speed when at maximum HP.",
+        shortDesc: "If this Pokemon is at full HP, it has doubled speed.",
+        onSourceBasePower: function(basePower, attacker, defender, move) {
+          if (attacker.hp >= attacker.maxhp) {
+            this.debug('Mach Scale boost');
+            onModifySpe: function(spe) {
+              return spe * 2;
+            }
+        },
+        id: "marvelscale",
+        name: "Marvel Scale",
+        rating: 4,
+        num: 2008
+  },
+  "tempest": {
+        desc: "When this Pokemon enters the field, Water and Flying-type opponents cannot switch out nor flee the battle unless they are holding Shed Shell or use the attacks U-Turn or Baton Pass.",
+        shortDesc: "Prevents Water and Flying-type foes from switching out normally.",
+        onFoeModifyPokemon: function(pokemon) {
+          if (pokemon.hasType('Water')) {
+          else if (pokemon.hasType('Flying')) {
+          pokemon.trapped = true;
+          }
+        },
+        id: "tempest",
+        name: "Tempest",
+        rating: 5,
+        num: 2009
+        }
 };
