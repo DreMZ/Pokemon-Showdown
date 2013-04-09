@@ -289,5 +289,50 @@ exports.BattleMovedex = {
                 secondary: false,
                 target: "normal",
                 type: "Steel"
+        },
+        "paleowave": {
+                num: -103
+                accuracy: 100,
+                basePower: 90,
+                category: "Special",
+                desc: "Deals damage to one adjacent target with a 10% chance to increase Special Attack.",
+                shortDesc: "10% chance to increase SpA by 1.",
+                id: "paleowave",
+                isViable: true,
+                name: "Paleo Wave",
+                pp: 15,
+                priority: 0,
+                secondary: {
+                        chance: 10,
+                        self: {
+                                boosts: {
+                                        spa: 1
+                                }
+                        }
+                },
+                target: "normal",
+                type: "Rock"
+        },
+        "shadowstrike": {
+                num: -104
+                accuracy: 95,
+                basePower: 80,
+                category: "Physical",
+                desc: "Deals damage to one adjacent target with a 50% chance to lower its Defense by 1 stage. Makes contact.",
+                shortDesc: "50% chance to lower the target's Defense by 1.",
+                id: "shadowstrike",
+                isViable: true,
+                name: "ShadowStrike",
+                pp: 10,
+                priority: 0,
+                isContact: true,
+                secondary: {
+                        chance: 50,
+                        boosts: {
+                                def: -1
+                                }
+                },
+                target: "normal",
+                type: "Ghost"
         }
  }; 
