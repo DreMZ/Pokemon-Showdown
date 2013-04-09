@@ -12,6 +12,7 @@
         searchShow: true,
         isTeambuilderFormat: true,
         rated: true,
+        debug: true,
         ruleset: ['Pokemon', 'Standard', 'Evasion Abilities Clause', 'Team Preview','Sleep Clause'],
         banlist: ['RU','UU','Uber','OU', 'Beheeyem', 'Braviary', 'Gardevoir', 'Musharna', 'Luxray', 'Roselia', 'Drizzle', 'Drought', 'Sand Rush + Torterra + Shell Smash']
         },
@@ -24,6 +25,7 @@
                 searchShow: true,
                 isTeambuilderFormat: true,
                 rated: true,
+                debug: true,
                 ruleset: ['Pokemon', 'Standard', 'Evasion Abilities Clause', 'Team Preview','Sleep Clause'],
                 banlist: ['BL2', 'Abomasnow', 'Ambipom', 'Arcanine', 'Archeops', 'Azelf', 'Azumarill', 'Beheeyem', 'Bisharp', 'Blastoise', 'Bronzong', 'Chandelure', 'Claydol', 'Cobalion', 'Cofagrigus', 'Crobat', 'Dusclops', 'Empoleon', 'Flygon', 'Froslass', 'Heracross', 'Hitmontop', 'Honchkrow', 'Houndoom', 'Kingdra', 'Krookodile', 'Meloetta', 'Machamp', 'Mew', 'Mienshao', 'Milotic', 'Mismagius', 'Nidoking', 'Porygon-Z', 'Porygon2', 'Raikou', 'Registeel', 'Rhyperior', 'Roserade', 'Rotom-Heat', 'Sableye', 'Scrafty', 'Sharpedo', 'Shaymin', 'Slowbro', 'Snorlax', 'Suicune', 'Swampert', 'Togekiss', 'Tornadus', 'Umbreon', 'Victini', 'Virizion', 'Weavile', 'Xatu', 'Yanmega', 'Zapdos', 'Zoroark', 'Shell Smash + Baton Pass', 'BL1', 'OU','Uber'],
         },
