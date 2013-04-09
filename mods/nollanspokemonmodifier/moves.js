@@ -22,6 +22,152 @@ exports.BattleMovedex = {
             }
         }
     },
+    "trickroom": {
+                num: 433,
+                accuracy: true,
+                basePower: 0,
+                category: "Status",
+                desc: "For 5 turns, all active Pokemon with lower Speed will move before those with higher Speed, within their priority brackets. If this move is used during the effect, the effect ends. Priority -7.",
+                shortDesc: "For 5 turns, slower Pokemon move first.",
+                id: "trickroom",
+                isViable: true,
+                name: "Trick Room",
+                pp: 5,
+                priority: -7,
+                onHitField: function(target, source, effect) {
+                        if (this.pseudoWeather['trickroom']) {
+                                this.removePseudoWeather('trickroom', source, effect, '[of] '+source);
+                                } else {
+                                this.addPseudoWeather('trickroom', source, effect, '[of] '+source);
+                                }
+                },
+                effect: {
+                duration: 5,
+                durationCallback: function(target, source, effect) {
+                        if (source && source.ability === 'persistent') {
+                        return 8;
+                        }
+                return 5;
+                },
+                onStart: function(target, source) {
+                this.add('-fieldstart', 'move: Trick Room', '[of] '+source);
+                },
+                onModifySpePriority: -100,
+                onModifySpe: function(spe) {
+                },
+                onResidualOrder: 23,
+                onEnd: function() {
+                        this.add('-fieldend', 'move: Trick Room');
+                        }
+                },
+                secondary: false,
+                target: "all",
+                type: "Psychic"
+        },
+        "gravity": {
+                num: 356,
+                accuracy: true,
+                basePower: 0,
+                category: "Status",
+                desc: "For 5 turns, the evasion of all active Pokemon is 0.6x. At the time of use, Bounce, Fly, Magnet Rise, Sky Drop, and Telekinesis end immediately for all active Pokemon. During the effect, Bounce, Fly, Hi Jump Kick, Jump Kick, Magnet Rise, Sky Drop, Splash, and Telekinesis are prevented from being used by all active Pokemon. Ground-type attacks, Spikes, Toxic Spikes, and the Ability Arena Trap can affect Flying-types or Pokemon with the Ability Levitate. Fails if this move is already in effect.",
+                shortDesc: "For 5 turns, negates all Ground immunities.",
+                id: "gravity",
+                isViable: true,
+                name: "Gravity",
+                pp: 5,
+                priority: 0,
+                pseudoWeather: 'gravity',
+                effect: {
+                duration: 5,
+                durationCallback: function(target, source, effect) {
+                        if (source && source.ability === 'persistent') {
+                        return 8;
+                        }
+                return 5;
+                },
+                onStart: function() {
+                        this.add('-fieldstart', 'move: Gravity');
+                },
+                onAccuracy: function(accuracy) {
+                        if (typeof accuracy !== 'number') return;
+                        return accuracy * 5/3;
+                },
+                onModifyPokemonPriority: 100,
+                onModifyPokemon: function(pokemon) {
+                        pokemon.negateImmunity['Ground'] = true;
+                        var disabledMoves = {bounce:1, fly:1, hijumpkick:1, jumpkick:1, magnetrise:1, skydrop:1, splash:1, telekinesis:1};
+                        for (var m in disabledMoves) {
+                                pokemon.disabledMoves[m] = true;
+                                }
+                var applies = false;
+                if (pokemon.removeVolatile('bounce') || pokemon.removeVolatile('fly') || pokemon.removeVolatile('skydrop')) {
+                applies = true;
+                pokemon.movedThisTurn = true;
+                }
+                if (pokemon.volatiles['magnetrise']) {
+                        applies = true;
+                        delete pokemon.volatiles['magnetrise'];
+                }
+                if (pokemon.volatiles['telekinesis']) {
+                        applies = true;
+                        delete pokemon.volatiles['telekinesis'];
+                }
+                if (applies) this.add('-activate', pokemon, 'Gravity');
+                },
+                onBeforeMove: function(pokemon, target, move) {
+                        var disabledMoves = {bounce:1, fly:1, hijumpkick:1, jumpkick:1, magnetrise:1, skydrop:1, splash:1, telekinesis:1};
+                        if (disabledMoves[move.id]) {
+                                this.add('cant', pokemon, 'move: Gravity', move);
+                                return false;
+                                }
+                },
+                onResidualOrder: 22,
+                onEnd: function() {
+                        this.add('-fieldend', 'move: Gravity');
+                        }
+                },
+                secondary: false,
+                target: "all",
+                type: "Psychic"
+        },
+        "tailwind": {
+                num: 366,
+                accuracy: true,
+                basePower: 0,
+                category: "Status",
+                desc: "For 4 turns, the user and its party members have their Speed doubled. Fails if this move is already in effect for the user's side.",
+                shortDesc: "For 4 turns, allies' Speed is doubled.",
+                id: "tailwind",
+                isViable: true,
+                name: "Tailwind",
+                pp: 30,
+                priority: 0,
+                isSnatchable: true,
+                sideCondition: 'tailwind',
+                effect: {
+                duration: 4,
+                durationCallback: function(target, source, effect) {
+                        if (source && source.ability === 'persistent') {
+                        return 8;
+                        }
+                return 4;
+                },
+                onStart: function(side) {
+                        this.add('-sidestart', side, 'move: Tailwind');
+                },
+                onModifySpe: function(spe) {
+                        return spe * 2;
+                },
+                onResidualOrder: 21,
+                onResidualSubOrder: 4,
+                onEnd: function(side) {
+                        this.add('-sideend', side, 'move: Tailwind');
+                        }
+                },
+                secondary: false,
+                target: "allySide",
+                type: "Flying"
+        },
         "wildcharge": {
                 num: 528,
                 accuracy: 100,
