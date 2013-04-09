@@ -539,5 +539,14 @@ exports.BattleAbilities = {
         name: "Iron Fist",
         rating: 3,
         num: 52
+        },
+    "persistent": {
+        desc: "Increases the duration of many field effects to eight turns when used by this Pokémon.",
+        shortDesc: "The duration of certain field effects becomes 8 turns if used by this Pokemon.",
+        id: "persistent",
+        name: "Persistent",
+// implemented in the corresponding move
+        rating: 4,
+        num: -4
         }
   };
