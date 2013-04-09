@@ -360,7 +360,7 @@ exports.BattleMovedex = {
                 type: "Steel"
         },
         "paleowave": {
-                num: -103
+                num: -103,
                 accuracy: 100,
                 basePower: 90,
                 category: "Special",
@@ -383,7 +383,7 @@ exports.BattleMovedex = {
                 type: "Rock"
         },
         "shadowstrike": {
-                num: -104
+                num: -104,
                 accuracy: 95,
                 basePower: 80,
                 category: "Physical",
@@ -441,7 +441,7 @@ exports.BattleMovedex = {
                 accuracy: 100
         },
         "hiddenstrikebug": {
-                num: -105
+                num: -105,
                 accuracy: 100,
                 basePower: 70,
                 category: "Physical",
@@ -456,7 +456,7 @@ exports.BattleMovedex = {
                 type: "Bug"
         },
         "hiddenstrikedark": {
-                num: -106
+                num: -106,
                 accuracy: 100,
                 basePower: 70,
                 category: "Physical",
@@ -472,7 +472,7 @@ exports.BattleMovedex = {
                 type: "Dark"
         },
         "hiddenstrikedragon": {
-                num: -107
+                num: -107,
                 accuracy: 100,
                 basePower: 70,
                 category: "Physical",
@@ -487,7 +487,7 @@ exports.BattleMovedex = {
                 type: "Dragon"
         },
         "hiddenstrikeelectric": {
-                num: -108
+                num: -108,
                 accuracy: 100,
                 basePower: 70,
                 category: "Physical",
@@ -503,7 +503,7 @@ exports.BattleMovedex = {
                 type: "Electric"
         },
         "hiddenstrikefighting": {
-                num: -109
+                num: -109,
                 accuracy: 100,
                 basePower: 70,
                 category: "Physical",
@@ -519,7 +519,7 @@ exports.BattleMovedex = {
                 type: "Fighting"
         },
         "hiddenstrikefire": {
-                num: -110
+                num: -110,
                 accuracy: 100,
                 basePower: 70,
                 category: "Physical",
@@ -535,7 +535,7 @@ exports.BattleMovedex = {
                 type: "Fire"
         },
         "hiddenstrikeflying": {
-                num: -111
+                num: -111,
                 accuracy: 100,
                 basePower: 70,
                 category: "Physical",
@@ -550,7 +550,7 @@ exports.BattleMovedex = {
                 type: "Flying"
         },
         "hiddenstrikeghost": {
-                num: -112
+                num: -112,
                 accuracy: 100,
                 basePower: 70,
                 category: "Physical",
@@ -566,7 +566,7 @@ exports.BattleMovedex = {
                 type: "Ghost"
         },
         "hiddenstrikegrass": {
-                num: -113
+                num: -113,
                 accuracy: 100,
                 basePower: 70,
                 category: "Physical",
@@ -581,7 +581,7 @@ exports.BattleMovedex = {
                 type: "Grass"
         },
         "hiddenstrikeground": {
-                num: -114
+                num: -114,
                 accuracy: 100,
                 basePower: 70,
                 category: "Physical",
@@ -597,7 +597,7 @@ exports.BattleMovedex = {
                 type: "Ground"
         },
         "hiddenstrikeice": {
-                num: -115
+                num: -115,
                 accuracy: 100,
                 basePower: 70,
                 category: "Physical",
@@ -613,7 +613,7 @@ exports.BattleMovedex = {
                 type: "Ice"
         },
         "hiddenstrikepoison": {
-                num: -116
+                num: -116,
                 accuracy: 100,
                 basePower: 70,
                 category: "Physical",
@@ -628,7 +628,7 @@ exports.BattleMovedex = {
                 type: "Poison"
         },
         "hiddenstrikepsychic": {
-                num: -117
+                num: -117,
                 accuracy: 100,
                 basePower: 70,
                 category: "Physical",
@@ -643,7 +643,7 @@ exports.BattleMovedex = {
                 type: "Psychic"
         },
         "hiddenstrikerock": {
-                num: -118
+                num: -118,
                 accuracy: 100,
                 basePower: 70,
                 category: "Physical",
@@ -659,7 +659,7 @@ exports.BattleMovedex = {
                 type: "Rock"
         },
         "hiddenstrikesteel": {
-                num: -119
+                num: -119,
                 accuracy: 100,
                 basePower: 70,
                 category: "Physical",
@@ -674,7 +674,7 @@ exports.BattleMovedex = {
                 type: "Steel"
         },
         "hiddenstrikewater": {
-                num: -120
+                num: -120,
                 accuracy: 100,
                 basePower: 70,
                 category: "Physical",
@@ -688,4 +688,19 @@ exports.BattleMovedex = {
                 target: "normal",
                 type: "Water"
         },
+        "hiddenstrike": {
+                num: -121,
+                accuracy: 100,
+                basePower: 70,
+                category: "Physical",
+                desc: "",
+                shortDesc: "",
+                id: "hiddenstrike",
+                name: "Hidden Strike",
+                pp: 15,
+                priority: 0,
+                secondary: false,
+                target: "normal",
+                type: "Normal"
+        }
  }; 
