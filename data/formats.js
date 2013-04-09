@@ -265,7 +265,7 @@
 		searchShow: true,
 		isTeambuilderFormat: true,
 		ruleset: ['Pokemon', 'Standard', 'Team Preview', 'Middle Cup'],
-		banlist: ['Chansey']
+		banlist: ['Chansey', 'Drought + Chlorophyll']
 	},
 	lc: {
 		name: "LC",
