@@ -37,7 +37,7 @@
 	searchShow: true,
 	isTeambuilderFormat: true,
 	debug: true,
-	ruleset: ['Pokemon', 'Standard', 'Team Preview'],
+	ruleset: ['Pokemon', 'Standard', 'Team Preview', 'NPM Clause'],
 	banlist: ['Uber', 'Excadrill + Sand Rush', 'Garchomp + Mach Scale', 'Trickster']
 	},
 	TheScienceCorner: {
@@ -251,6 +251,19 @@
 		isTeambuilderFormat: true,
 		ruleset: ['RU'],
 		banlist: ['RU','BL3']
+	},
+	mc: {
+		name: "MC",
+		section: "Singles",
+		
+		effectType: 'Format',
+		maxLevel: 50,
+		rated: true,
+		challengeShow: true,
+		searchShow: true,
+		isTeambuilderFormat: true,
+		ruleset: ['Pokemon', 'Standard', 'Team Preview', 'Middle Cup'],
+		banlist: ['Chansey']
 	},
 	lc: {
 		name: "LC",
@@ -1330,6 +1343,21 @@
 			}
 		}
 	},
+	middlecup: {
+		effectType: 'Rule',
+		onStart: function() {
+			this.add('rule', 'Middle Cup Clause: Fully Evolved pokemon are banned');
+		},
+		validateSet: function(set) {
+			var template = this.getTemplate(set.species || set.name);
+			if (template.evo) {
+				return [set.species+" is the last in its evolution family."];
+			}
+			if. (!template.nfe) {
+				return [set.species+" doesn't have an evolution family."]
+			}
+		}
+	},
 	speciesclause: {
 		effectType: 'Rule',
 		onStart: function() {
@@ -1344,6 +1372,12 @@
 				}
 				speciesTable[template.num] = true;
 			}
+		}
+	},
+	npmclause: {
+		effectType: 'Rule',
+		onStart: function() {
+			this.add('rule', 'NPM Clause: All players are required to have fun. If at the end of any given turn, a player is not having fun, he will forcibly lose.');
 		}
 	},
 	itemclause: {
