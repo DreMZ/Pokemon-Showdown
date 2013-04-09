@@ -334,5 +334,41 @@ exports.BattleMovedex = {
                 },
                 target: "normal",
                 type: "Ghost"
+        },
+        "toxic": {
+                inherit: true,
+                accuracy: 100
+        },
+        "willowisp": {
+                inherit: true,
+                accuracy: 100
+        },
+        "leechseed": {
+                inherit: true,
+                accuracy: 100
+        },
+        "firefang": {
+                inherit: true,
+                accuracy: 100
+        },
+        "icefang": {
+                inherit: true,
+                accuracy: 100
+        },
+        "thunderfang": {
+                inherit: true,
+                accuracy: 100
+        },
+        "icywind": {
+                inherit: true,
+                accuracy: 100
+        },
+        "stunspore": {
+                inherit: true,
+                accuracy: 100
+        },
+        "poisonpowder": {
+                inherit: true,
+                accuracy: 100
         }
  }; 
