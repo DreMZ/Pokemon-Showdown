@@ -22,7 +22,70 @@ exports.BattleMovedex = {
             }
         }
     },
-
+        "wildcharge": {
+                num: 528,
+                accuracy: 100,
+                basePower: 100,
+                category: "Physical",
+                desc: "Deals damage to one adjacent target. If the target lost HP, the user takes recoil damage equal to 1/4 that HP, rounded half up, but not less than 1HP. Makes contact.",
+                shortDesc: "Has 1/4 recoil.",
+                id: "wildcharge",
+                isViable: true,
+                name: "Wild Charge",
+                pp: 15,
+                priority: 0,
+                isContact: true,
+                recoil: [1,4],
+                secondary: false,
+                target: "normal",
+                type: "Electric"
+        },
+        "submission": {
+                num: 66,
+                accuracy: 100,
+                basePower: 100,
+                category: "Physical",
+                desc: "Deals damage to one adjacent target. If the target lost HP, the user takes recoil damage equal to 1/4 that HP, rounded half up, but not less than 1HP. Makes contact.",
+                shortDesc: "Has 1/4 recoil.",
+                id: "submission",
+                name: "Submission",
+                pp: 25,
+                priority: 0,
+                isContact: true,
+                recoil: [1,4],
+                secondary: false,
+                target: "normal",
+                type: "Fighting"
+        },
+        "rockslide:": {
+                inherit: true,
+                accuracy: 100,
+                basePower: 80
+        },
+        "airslash": {
+                inherit: true
+                accuracy: 100,
+                basePower: 80
+        },
+        "spiderweb": {
+                num: 169,
+                accuracy: 90,
+                basePower: 90,
+                category: "Special",
+                desc: "Deals damage and prevents one adjacent target from switching out. The target can still switch out if it is holding Shed Shell or uses Baton Pass, U-turn, or Volt Switch. If the target leaves the field using Baton Pass, the replacement will remain trapped. The effect ends if the user leaves the field. Pokemon protected by Magic Coat or the Ability Magic Bounce are unaffected and instead use this move themselves.",
+                shortDesc: "Deals damage and the target cannot switch out.",
+                id: "spiderweb",
+                isViable: true,
+                name: "Spider Web",
+                pp: 10,
+                priority: 0,
+                onHit: function(target) {
+                        target.addVolatile('trapped');
+                },
+                secondary: false,
+                target: "allAdjacentFoes",
+                type: "Bug"
+        },
  "shadowball": {
         inherit: true,
         basePower: 90,
@@ -40,6 +103,7 @@ exports.BattleMovedex = {
         desc: "Deals damage to one adjacent target and lowers the user's Attack by 2 stages.",
         shortDesc: "Lowers the user's Atk by 2.",
         id: "fissure",
+        isViable: true,
         name: "Fissure",
         pp: 5,
         priority: 0,
@@ -106,6 +170,7 @@ exports.BattleMovedex = {
                 desc: "Deals damage to one adjacent target. Often causes paralysis.",
                 shortDesc: "Deals damage with 30% to paralyze foe.",
                 id: "venoshock",
+                isViable: true,
                 name: "Venoshock",
                 pp: 10,
                 priority: 0,
@@ -122,6 +187,7 @@ exports.BattleMovedex = {
   },
   "hypnosis": {
           inherit: true,
+          isViable: true,
           accuracy: 80
   },
     "lockon": {
@@ -190,12 +256,14 @@ exports.BattleMovedex = {
    "flameburst": {
         inherit: true,
         basePower: 40,
+        isViable: true,
         priority: 1,
         secondary: false,
         }
   },
   "poisontail": {
           inherit: true,
+          isViable: true,
           basePower: 95
   },
   "stoneedge": {
@@ -205,6 +273,7 @@ exports.BattleMovedex = {
   },
   "hex": {
           inherit: true,
+          isViable: true,
           basePower: 60
   },
           "rage": {
@@ -370,5 +439,253 @@ exports.BattleMovedex = {
         "poisonpowder": {
                 inherit: true,
                 accuracy: 100
-        }
+        },
+        "hiddenstrikebug": {
+                num: -105
+                accuracy: 100,
+                basePower: 70,
+                category: "Physical",
+                desc: "",
+                shortDesc: "",
+                id: "hiddenstrikebug",
+                name: "Hidden Strike Bug",
+                pp: 15,
+                priority: 0,
+                secondary: false,
+                target: "normal",
+                type: "Bug"
+        },
+        "hiddenstrikedark": {
+                num: -106
+                accuracy: 100,
+                basePower: 70,
+                category: "Physical",
+                desc: "",
+                shortDesc: "",
+                id: "hiddenstrikedark",
+                isViable: true,
+                name: "Hidden Strike Dark",
+                pp: 15,
+                priority: 0,
+                secondary: false,
+                target: "normal",
+                type: "Dark"
+        },
+        "hiddenstrikedragon": {
+                num: -107
+                accuracy: 100,
+                basePower: 70,
+                category: "Physical",
+                desc: "",
+                shortDesc: "",
+                id: "hiddenstrikedragon",
+                name: "Hidden Strike Dragon",
+                pp: 15,
+                priority: 0,
+                secondary: false,
+                target: "normal",
+                type: "Dragon"
+        },
+        "hiddenstrikeelectric": {
+                num: -108
+                accuracy: 100,
+                basePower: 70,
+                category: "Physical",
+                desc: "",
+                shortDesc: "",
+                id: "hiddenstrikeelectric",
+                isViable: true,
+                name: "Hidden Strike Electric",
+                pp: 15,
+                priority: 0,
+                secondary: false,
+                target: "normal",
+                type: "Electric"
+        },
+        "hiddenstrikefighting": {
+                num: -109
+                accuracy: 100,
+                basePower: 70,
+                category: "Physical",
+                desc: "",
+                shortDesc: "",
+                id: "hiddenstrikefighting",
+                isViable: true,
+                name: "Hidden Strike Fighting",
+                pp: 15,
+                priority: 0,
+                secondary: false,
+                target: "normal",
+                type: "Fighting"
+        },
+        "hiddenstrikefire": {
+                num: -110
+                accuracy: 100,
+                basePower: 70,
+                category: "Physical",
+                desc: "",
+                shortDesc: "",
+                id: "hiddenstrikefire",
+                isViable: true,
+                name: "Hidden Strike Fire",
+                pp: 15,
+                priority: 0,
+                secondary: false,
+                target: "normal",
+                type: "Fire"
+        },
+        "hiddenstrikeflying": {
+                num: -111
+                accuracy: 100,
+                basePower: 70,
+                category: "Physical",
+                desc: "",
+                shortDesc: "",
+                id: "hiddenstrikeflying",
+                name: "Hidden Strike Flying",
+                pp: 15,
+                priority: 0,
+                secondary: false,
+                target: "normal",
+                type: "Flying"
+        },
+        "hiddenstrikeghost": {
+                num: -112
+                accuracy: 100,
+                basePower: 70,
+                category: "Physical",
+                desc: "",
+                shortDesc: "",
+                id: "hiddenstrikeghost",
+                isViable: true,
+                name: "Hidden Strike Ghost",
+                pp: 15,
+                priority: 0,
+                secondary: false,
+                target: "normal",
+                type: "Ghost"
+        },
+        "hiddenstrikegrass": {
+                num: -113
+                accuracy: 100,
+                basePower: 70,
+                category: "Physical",
+                desc: "",
+                shortDesc: "",
+                id: "hiddenstrikegrass",
+                name: "Hidden Strike Grass",
+                pp: 15,
+                priority: 0,
+                secondary: false,
+                target: "normal",
+                type: "Grass"
+        },
+        "hiddenstrikeground": {
+                num: -114
+                accuracy: 100,
+                basePower: 70,
+                category: "Physical",
+                desc: "",
+                shortDesc: "",
+                id: "hiddenstrikeground",
+                isViable: true,
+                name: "Hidden Strike Ground",
+                pp: 15,
+                priority: 0,
+                secondary: false,
+                target: "normal",
+                type: "Ground"
+        },
+        "hiddenstrikeice": {
+                num: -115
+                accuracy: 100,
+                basePower: 70,
+                category: "Physical",
+                desc: "",
+                shortDesc: "",
+                id: "hiddenstrikeice",
+                isViable: true,
+                name: "Hidden Strike Ice",
+                pp: 15,
+                priority: 0,
+                secondary: false,
+                target: "normal",
+                type: "Ice"
+        },
+        "hiddenstrikepoison": {
+                num: -116
+                accuracy: 100,
+                basePower: 70,
+                category: "Physical",
+                desc: "",
+                shortDesc: "",
+                id: "hiddenstrikepoison",
+                name: "Hidden Strike Poison",
+                pp: 15,
+                priority: 0,
+                secondary: false,
+                target: "normal",
+                type: "Poison"
+        },
+        "hiddenstrikepsychic": {
+                num: -117
+                accuracy: 100,
+                basePower: 70,
+                category: "Physical",
+                desc: "",
+                shortDesc: "",
+                id: "hiddenstrikepsychic",
+                name: "Hidden Strike Psychic",
+                pp: 15,
+                priority: 0,
+                secondary: false,
+                target: "normal",
+                type: "Psychic"
+        },
+        "hiddenstrikerock": {
+                num: -118
+                accuracy: 100,
+                basePower: 70,
+                category: "Physical",
+                desc: "",
+                shortDesc: "",
+                id: "hiddenstrikerock",
+                isViable: true,
+                name: "Hidden Strike Rock",
+                pp: 15,
+                priority: 0,
+                secondary: false,
+                target: "normal",
+                type: "Rock"
+        },
+        "hiddenstrikesteel": {
+                num: -119
+                accuracy: 100,
+                basePower: 70,
+                category: "Physical",
+                desc: "",
+                shortDesc: "",
+                id: "hiddenstrikesteel",
+                name: "Hidden Strike Steel",
+                pp: 15,
+                priority: 0,
+                secondary: false,
+                target: "normal",
+                type: "Steel"
+        },
+        "hiddenstrikewater": {
+                num: -120
+                accuracy: 100,
+                basePower: 70,
+                category: "Physical",
+                desc: "",
+                shortDesc: "",
+                id: "hiddenstrikewater",
+                name: "Hidden Strike Water",
+                pp: 15,
+                priority: 0,
+                secondary: false,
+                target: "normal",
+                type: "Water"
+        },
  }; 
