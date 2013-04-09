@@ -872,7 +872,7 @@ exports.BattleItems = {
 		name: "Eviolite",
 		spritenum: 130,
 		fling: {
-			basePower: 70
+			basePower: 40
 		},
 		onModifyDef: function(def, pokemon) {
 			if (pokemon.baseTemplate.nfe) {
