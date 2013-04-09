@@ -7,4 +7,10 @@ exports.BattleStatuses = {
             }
         }
     },
+    lockedmove: {
+        inherit: true,
+        durationCallback: function() {
+            return 3;
+            }
+    }
 };
