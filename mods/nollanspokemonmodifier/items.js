@@ -1,4 +1,41 @@
-exports.BattleItems = {  	  
+exports.BattleItems = {  	
+  "blacksludge": {
+        id: "blacksludge",
+        name: "Black Sludge",
+        spritenum: 34,
+        fling: {
+          basePower: 30
+        },
+        onResidualOrder: 5,
+        onResidualSubOrder: 2,
+        onResidual: function(pokemon) {
+          if (pokemon.hasType('Poison')) {
+            this.heal(pokemon.maxhp/12);
+            } else {
+            this.damage(pokemon.maxhp/12);
+            }
+        },
+        desc: "Each turn, if holder is a Poison-type, restores 1/12 max HP; loses 1/12 if not."
+  },
+  "shedshell": {
+        id: "shedshell",
+        name: "Shed Shell",
+        spritenum: 437,
+        fling: {
+          basePower: 10
+        },
+        onModifyDef: function(def, pokemon) {
+          if (pokemon.template.species === 'Lapras' || pokemon.template.species === 'Crustle' || pokemon.template.species === 'Forretress' || pokemon.template.species === 'Crawdaunt' || pokemon.template.species === 'Escavalier' || pokemon.template.species === 'Omastar' || pokemon.template.species === 'Carracosta' || pokemon.template.species === 'Kingler' || pokemon.template.species === 'Shuckle' || pokemon.template.species === 'Torkoal' || pokemon.template.species === 'Torterra') {
+          return def * 1.3;
+          }
+        },
+        onModifySpD: function(spd, pokemon) {
+          if (pokemon.template.species === 'Lapras' || pokemon.template.species === 'Crustle' || pokemon.template.species === 'Forretress' || pokemon.template.species === 'Crawdaunt' || pokemon.template.species === 'Escavalier' || pokemon.template.species === 'Omastar' || pokemon.template.species === 'Carracosta' || pokemon.template.species === 'Kingler' || pokemon.template.species === 'Shuckle' || pokemon.template.species === 'Torkoal' || pokemon.template.species === 'Torterra') {
+          return spd * 1.3;
+          }
+        },
+        desc: "Boosts the defenses of various pokemon with shells by 30%."
+  },
   "nevermeltice": {
         id: "nevermeltice",
         name: "NeverMeltIce",
