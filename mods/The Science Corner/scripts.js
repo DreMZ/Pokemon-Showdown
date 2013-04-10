@@ -42,6 +42,7 @@ exports.BattleScripts = {
 
 		// Zororark: much wider movepool
 		this.data.Learnsets.zoroark.learnset.earthquake = ['5M'];
+		this.data.Learnsets.zoroark.learnset.black hole = ['5M'];
 		this.data.Learnsets.zoroark.learnset.stoneedge = ['5M'];
 		this.data.Learnsets.zoroark.learnset.icebeam = ['5M'];
 		this.data.Learnsets.zoroark.learnset.xscissor = ['5M'];

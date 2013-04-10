@@ -1542,4 +1542,24 @@ exports.BattleMovedex = {
                 secondary: false,
                 target: "normal",
                 type: "Dark"
+	sharpen: {
+        num: 159,
+        accuracy: true,
+        basePower: 0,
+        category: "Status",
+        desc: "Boosts Attack by three stages.",
+        shortDesc: "Boosts Atk by 3 stages.",
+        id: "sharpen",
+        isViable: true,
+        name: "Sharpen",
+        pp: 20,
+        priority: 0,
+        isSnatchable: true,
+        boosts: {
+          atk: 3
+        },
+        secondary: false,
+        target: "self",
+        type: "Steel"
+  },
 };
