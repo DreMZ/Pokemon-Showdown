@@ -40,7 +40,7 @@
 	isTeambuilderFormat: true,
 	debug: true,
 	ruleset: ['Pokemon', 'Standard', 'Team Preview', 'NPM Clause'],
-	banlist: ['Uber', 'Excadrill + Sand Rush', 'Garchomp + Mach Scale', 'Trickster']
+	banlist: ['Uber', 'Excadrill + Sand Rush', 'Trickster']
 	},
 	TheScienceCorner: {
         effectType: 'Format',
@@ -52,7 +52,7 @@
         isTeambuilderFormat: true,
         rated: true,
         ruleset: ['Pokemon', 'Standard', 'Evasion Abilities Clause', 'Team Preview','Sleep Clause'],
-        banlist: ['Uber', 'Excadrill + Sand Rush', 'Drizzle + SwiftSwim']
+        banlist: ['Uber', 'Excadrill + Sand Rush', 'Drizzle ++ SwiftSwim']
         },
 	randombattle: {
 		name: "Random Battle",
@@ -265,7 +265,7 @@
 		searchShow: true,
 		isTeambuilderFormat: true,
 		ruleset: ['Pokemon', 'Standard', 'Team Preview', 'Middle Cup'],
-		banlist: ['Chansey', 'Drought + Chlorophyll']
+		banlist: ['Chansey', 'Drought ++ Chlorophyll']
 	},
 	lc: {
 		name: "LC",
