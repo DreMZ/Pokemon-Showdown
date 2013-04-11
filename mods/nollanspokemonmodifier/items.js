@@ -1,4 +1,20 @@
-exports.BattleItems = {  	
+exports.BattleItems = {
+  "twistedspoon": {
+        id: "twistedspoon",
+        name: "TwistedSpoon",
+        spritenum: 520,
+        fling: {
+          basePower: 30
+        },
+        onModifyMove: function(move) {
+          if (move && user.template.species === 'Alakazam' && (move.category === 'Physical')) {
+            inherit: true,
+            category: "Special",
+            defensiveCategory: "Physical"
+            }
+        },
+        desc: "If holder is Alakazam, physical moves deal damage based on the attacker's special attack."
+  },
   "blacksludge": {
         id: "blacksludge",
         name: "Black Sludge",
