@@ -41,12 +41,12 @@ exports.BattleItems = {
           basePower: 10
         },
         onModifyDef: function(def, pokemon) {
-          if (pokemon.template.species === 'Lapras' || pokemon.template.species === 'Crustle' || pokemon.template.species === 'Forretress' || pokemon.template.species === 'Crawdaunt' || pokemon.template.species === 'Escavalier' || pokemon.template.species === 'Omastar' || pokemon.template.species === 'Carracosta' || pokemon.template.species === 'Kingler' || pokemon.template.species === 'Shuckle' || pokemon.template.species === 'Torkoal' || pokemon.template.species === 'Torterra') {
+          if (pokemon.template.species === 'Lapras' || pokemon.template.species === 'Crustle' || pokemon.template.species === 'Crawdaunt' || pokemon.template.species === 'Escavalier' || pokemon.template.species === 'Omastar' || pokemon.template.species === 'Carracosta' || pokemon.template.species === 'Kingler' || pokemon.template.species === 'Shuckle' || pokemon.template.species === 'Torkoal' || pokemon.template.species === 'Torterra') {
           return def * 1.3;
           }
         },
         onModifySpD: function(spd, pokemon) {
-          if (pokemon.template.species === 'Lapras' || pokemon.template.species === 'Crustle' || pokemon.template.species === 'Forretress' || pokemon.template.species === 'Crawdaunt' || pokemon.template.species === 'Escavalier' || pokemon.template.species === 'Omastar' || pokemon.template.species === 'Carracosta' || pokemon.template.species === 'Kingler' || pokemon.template.species === 'Shuckle' || pokemon.template.species === 'Torkoal' || pokemon.template.species === 'Torterra') {
+          if (pokemon.template.species === 'Lapras' || pokemon.template.species === 'Crustle' || pokemon.template.species === 'Crawdaunt' || pokemon.template.species === 'Escavalier' || pokemon.template.species === 'Omastar' || pokemon.template.species === 'Carracosta' || pokemon.template.species === 'Kingler' || pokemon.template.species === 'Shuckle' || pokemon.template.species === 'Torkoal' || pokemon.template.species === 'Torterra') {
           return spd * 1.3;
           }
         },
