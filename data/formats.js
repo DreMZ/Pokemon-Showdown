@@ -202,19 +202,6 @@
 		ruleset: ['RU'],
 		banlist: ['RU','BL3']
 	},
-	mc: {
-		name: "MC",
-		section: "Singles",
-		
-		effectType: 'Format',
-		maxLevel: 50,
-		rated: true,
-		challengeShow: true,
-		searchShow: true,
-		isTeambuilderFormat: true,
-		ruleset: ['Pokemon', 'Standard', 'Team Preview', 'Middle Cup'],
-		banlist: ['Chansey', 'Drought ++ Chlorophyll']
-	},
 	lc: {
 		name: "LC",
 		section: "Singles",
