@@ -30,7 +30,7 @@
         },
         npmou: {
     effectType: 'Format',
-    section: 'Other Metagames',
+    section: 'Pokemon Mods',
     name: "NPM OU",
     mod: 'nollanspokemonmodifier',
     rated: true,
@@ -697,7 +697,7 @@
 	},*/
 	seasonalfoolsfestival: {
 		name: "[Seasonal] Fools Festival",
-		section: 'OM of the Month',
+		section: 'Other Metagames',
 
 		effectType: 'Format',
 		team: 'randomSeasonalFF',
