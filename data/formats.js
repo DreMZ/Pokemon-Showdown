@@ -38,7 +38,7 @@
     searchShow: true,
     isTeambuilderFormat: true,
     debug: true,
-    ruleset: ['Pokemon', 'Standard', 'Team Preview', 'NPM Clause'],
+    ruleset: ['Pokemon', 'Standard', 'Team Preview'],
     banlist: ['Uber', 'Excadrill + Sand Rush', 'Trickster']
     },
 	randombattle: {
@@ -1333,12 +1333,6 @@
 				}
 				speciesTable[template.num] = true;
 			}
-		}
-	},
-	npmclause: {
-		effectType: 'Rule',
-		onStart: function() {
-			this.add('rule', 'NPM Clause: All players are required to have fun. If at the end of any given turn, a player is not having fun, he will forcibly lose.');
 		}
 	},
 	itemclause: {
