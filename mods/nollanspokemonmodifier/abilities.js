@@ -534,8 +534,8 @@ exports.BattleAbilities = {
             return basePower * 12/10;
             }
         },
-        id: "ironfist",
-        name: "Iron Fist",
+        id: "hypercutter",
+        name: "Hyper Cutter",
         rating: 3,
         num: 52
         },
