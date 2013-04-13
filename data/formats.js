@@ -1280,21 +1280,6 @@
 			}
 		}
 	},
-	middlecup: {
-		effectType: 'Rule',
-		onStart: function() {
-			this.add('rule', 'Middle Cup Clause: Fully Evolved pokemon are banned');
-		},
-		validateSet: function(set) {
-			var template = this.getTemplate(set.species || set.name);
-			if (template.evo) {
-				return [set.species+" is the last in its evolution family."];
-			}
-			if. (!template.nfe) {
-				return [set.species+" doesn't have an evolution family."]
-			}
-		}
-	},
 	speciesclause: {
 		effectType: 'Rule',
 		onStart: function() {
