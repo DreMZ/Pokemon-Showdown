@@ -394,7 +394,7 @@ exports.BattleAbilities = {
         rating: 2,
         num: 35
   },
-  "marvelscale": {
+    "marvelscale": {
         desc: "Doubles damage given when at maximum HP.",
         shortDesc: "If this Pokemon is at full HP, it deals double damage with attacks.",
         onSourceBasePower: function(basePower, attacker, defender, move) {
@@ -402,6 +402,8 @@ exports.BattleAbilities = {
             this.debug('Marvel Scale boost');
            onModifySpA: function(spa) {
         return spa * 2;
+            },
+         if (attacker.hp >= attacker.maxhp) {
            onModifyAtk: function(atk) {
         return atk * 2;
             }
@@ -426,6 +428,7 @@ exports.BattleAbilities = {
         rating: 4,
         num: 2008
   },
+
   "tempest": {
         desc: "When this Pokemon enters the field, Water and Flying-type opponents cannot switch out nor flee the battle unless they are holding Shed Shell or use the attacks U-Turn or Baton Pass.",
         shortDesc: "Prevents Water and Flying-type foes from switching out normally.",
