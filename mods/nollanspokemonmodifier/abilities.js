@@ -430,8 +430,7 @@ exports.BattleAbilities = {
         desc: "When this Pokemon enters the field, Water and Flying-type opponents cannot switch out nor flee the battle unless they are holding Shed Shell or use the attacks U-Turn or Baton Pass.",
         shortDesc: "Prevents Water and Flying-type foes from switching out normally.",
         onFoeModifyPokemon: function(pokemon) {
-          if (pokemon.hasType('Water')) {
-          else if (pokemon.hasType('Flying')) {
+          if (pokemon.hasType('Water') || pokemon.hasType('Flying')) {
           pokemon.trapped = true;
           }
         },
