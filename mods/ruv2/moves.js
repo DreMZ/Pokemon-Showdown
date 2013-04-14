@@ -5,7 +5,7 @@
     },
             "paleowave": {
               inherit: true,
-          isNonstandard: false,
+        	isNonstandard: false,
     },
         "submission": {
               inherit: true,
@@ -18,7 +18,7 @@
         }
     },
         
-      	"lunardance": {
+      	lunardance: {
 		num: 461,
 		accuracy: true,
 		basePower: 0,
@@ -44,8 +44,19 @@
               inherit: true,
                 basePower: 90,
     },
-    	"psyshock": {
+    "psyshock": {
 	      inherit: true
 		basePower: 90,
 	},
+	"icywind": {
+	      inherit: true
+		accuracy: 100,
+		basePower: 90,
+		category: "Physical",
+		defensiveCategory: "Special",
+		desc: "Physical But Deals Special Damage.",
+		shortDesc: "Physical but hits on special defense.",
+		secondary: false
+	},
 };  
+ 
