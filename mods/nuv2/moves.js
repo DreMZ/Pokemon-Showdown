@@ -16,8 +16,7 @@
                         chance: 10,
                         volatileStatus: 'flinch'
         }
-    },
-        
+    },       
       	"lunardance": {
 		num: 461,
 		accuracy: true,
@@ -34,8 +33,7 @@
 			boosts: {
 			spa: 1,
 			spe: 1
-	},
-   
+	}, 
         "airslash": {
               inherit: true,
                 basePower: 90,
