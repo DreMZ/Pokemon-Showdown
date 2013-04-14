@@ -59,6 +59,22 @@ exports.BattleScripts = {
         this.data.Pokedex.zoroark.types = ["Dark","Ghost"];
         
         this.data.Pokedex.eelektross.types = ["Electric","Dragon"];
+        this.data.Learnsets.eelektross.learnset.outrage = ['5T'];
+        this.data.Learnsets.eelektross.learnset.dragondance = ['5L0'];
         
+        this.data.Pokedex.beheeyem.types = ["Psychic","Electric"];
+        this.data.learnsets.beheeyem.learnset.thunder = ['5M'];
+        
+        this.data.Pokedex.chandelure.abilities['DW'] = 'Levitate';
+        
+        this.data.Pokedex.beartic.types = ["Ice","Fighting"];
+        this.data.Learnsets.beartic.learnset.drainpunch = ['5T'];
+        
+        this.data.Pokedex.cryogonal.types = ["Ice","Steel"];
+        
+        this.data.Pokedex.druddigon.types = ["Dragon","Rock"];
+        this.data.Learnsets.druddigon.learnset.stoneedge = ['5M'];
+        
+        this.data.Pokedex.braviary.types = ["Fighting","Flying"];
         }
 };
