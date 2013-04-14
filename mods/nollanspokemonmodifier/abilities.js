@@ -86,39 +86,6 @@ exports.BattleAbilities = {
           return def * 1.2;
           }
   },
-  "wonderguard": {
-        desc: "This Pokemon only receives damage from attacks belonging to types that cause Super Effective to this Pokemon. The user is also immune to Sandstorm, Hail, and all entry hazards. Wonder Guard cannot be Skill Swapped nor Role Played. Trace, however, does copy Wonder Guard.",
-        shortDesc: "This Pokemon can only be damaged by super effective moves and is immune to some types of indirect damage.",
-        onDamagePriority: 10,
-        onDamage: function(damage, target, source, effect) {
-          if (effect && (effect.id === 'stealthrock' || effect.id === 'spikes')) {
-          return false;
-          }
-          if (effect.effectType !== 'Move') return;
-          if (effect.type === '???' || effect.id === 'Struggle') return;
-          this.debug('Wonder Guard immunity: '+effect.id);
-          if (this.getEffectiveness(effect.type, target) <= 0) {
-            this.add('-activate',target,'ability: Wonder Guard');
-            return null;
-            }
-        },
-        onSubDamage: function(damage, target, source, effect) {
-          if (effect.effectType !== 'Move') return;
-          if (target.negateImmunity[effect.type]) return;
-          this.debug('Wonder Guard immunity: '+effect.id);
-          if (this.getEffectiveness(effect.type, target) <= 0) {
-            this.add('-activate',target,'ability: Wonder Guard');
-            return null;
-            }
-        },
-        onImmunity: function(type, pokemon) {
-          if (type === 'sandstorm' || type === 'hail') return false;
-        },
-        id: "wonderguard",
-        name: "Wonder Guard",
-        rating: 5,
-        num: 25
-  },
   "zenmode": {
         desc: "When Darmanitan enters the battle, it will enter Zen Mode. This ability only works on Darmanitan, even if it is copied by Role Play, Entrainment, or swapped with Skill Swap.",
         shortDesc: "If this Pokemon is Darmanitan, it changes to Zen Mode.",
@@ -366,7 +333,7 @@ exports.BattleAbilities = {
         id: "sandveil",
         name: "Sand Veil",
         rating: 3,
-        num: 115
+        num: 8
   },
   "raindish": {
         desc: "If active while Rain Dance is in effect, this Pokemon recovers one-twelfth of its max HP after each turn.",
@@ -379,7 +346,7 @@ exports.BattleAbilities = {
         id: "raindish",
         name: "Rain Dish",
         rating: 3,
-        num: 115
+        num: 44
   },
   "illuminate": {
         desc: "Raises this Pokemon's (and it's allies') accuracy by 20% (multiplied).",
