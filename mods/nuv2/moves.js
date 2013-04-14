@@ -51,6 +51,6 @@
 		desc: "Physical But Deals Special Damage.",
 		shortDesc: "Physical but hits on special defense.",
 		secondary: false
-	},
+	}
 };  
  
