@@ -2,11 +2,11 @@
         "waterpulse": {
               inherit: true,
                 basePower: 80
-    },
+    	},
             "paleowave": {
               inherit: true,
-        	isNonstandard: false,
-    },
+        	isNonstandard: false
+    	},
         "submission": {
               inherit: true,
                 accuracy: 100,
@@ -33,14 +33,15 @@
 			boosts: {
 			spa: 1,
 			spe: 1
+			}
 	}, 
         "airslash": {
               inherit: true,
-                basePower: 90,
+                basePower: 90
     },
     "psyshock": {
 	      inherit: true,
-		basePower: 90,
+		basePower: 90
 	},
 	"icywind": {
 	      inherit: true,
@@ -51,7 +52,7 @@
 		desc: "Physical But Deals Special Damage.",
 		shortDesc: "Physical but hits on special defense.",
 		secondary: false
-	},
+	}
 };  
  
 
