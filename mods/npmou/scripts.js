@@ -66,7 +66,7 @@ exports.BattleScripts = {
         this.data.Learnsets.eelektross.learnset.dragondance = ['5L0'];
         
         this.data.Pokedex.beheeyem.types = ["Psychic","Electric"];
-        this.data.learnsets.beheeyem.learnset.thunder = ['5M'];
+        this.data.Learnsets.beheeyem.learnset.thunder = ['5M'];
         
         this.data.Pokedex.chandelure.abilities['DW'] = 'Levitate';
         
