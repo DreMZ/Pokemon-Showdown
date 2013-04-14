@@ -2,11 +2,11 @@
         "waterpulse": {
               inherit: true,
                 basePower: 80
-    },
+    	},
             "paleowave": {
               inherit: true,
         	isNonstandard: false
-    },
+    	},
         "submission": {
               inherit: true,
                 accuracy: 100,
