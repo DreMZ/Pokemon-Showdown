@@ -32,7 +32,7 @@
     effectType: 'Format',
     section: 'Pokemon Mods',
     name: "NPM OU",
-    mod: 'nollanspokemonmodifier',
+    mod: 'npmou',
     rated: true,
     challengeShow: true,
     searchShow: true,
