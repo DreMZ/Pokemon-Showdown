@@ -8,6 +8,9 @@ exports.BattleScripts = {
         
         this.data.Pokedex.clefable.types = ["Normal","Psychic"];
         
+        this.data.Pokedex.weezing.types = ["Poison","Electric"];
+        this.data.Learnsets.weezing.learnset.wildcharge = ['5M'];
+        
         this.data.Pokedex.pinsir.types = ["Bug","Dark"];
         this.data.Learnsets.pinsir.learnset.crunch = ['5L0'];
         this.data.Learnsets.pinsir.learnset.pursuit = ['5L0'];
