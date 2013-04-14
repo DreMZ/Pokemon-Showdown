@@ -50,9 +50,8 @@
     	challengeShow: true,
     	searchShow: true,
     	isTeambuilderFormat: true,
-    	debug: true,
-    	ruleset: ['Pokemon', 'Standard', 'Evasion Abilities Clause', 'Team Preview'],
-    	banlist: ['Uber', 'Soul Dew', 'Drizzle ++ Swift Swim']
+    	ruleset: ['CAP Pokemon', 'Standard', 'Evasion Abilities Clause', 'Team Preview'],
+    	banlist: ['Uber', 'Soul Dew', 'Drizzle ++ Swift Swim', 'G4CAP', 'Tomohawk', 'Necturna', 'Mollux', 'Aurumoth']
     },
 	randombattle: {
 		name: "Random Battle",
