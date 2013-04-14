@@ -33,6 +33,7 @@
 			boosts: {
 			spa: 1,
 			spe: 1
+			}
 	}, 
         "airslash": {
               inherit: true,
