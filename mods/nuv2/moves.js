@@ -5,7 +5,7 @@
     },
             "paleowave": {
               inherit: true,
-        	isNonstandard: false,
+        	isNonstandard: false
     },
         "submission": {
               inherit: true,
@@ -36,11 +36,11 @@
 	}, 
         "airslash": {
               inherit: true,
-                basePower: 90,
+                basePower: 90
     },
     "psyshock": {
 	      inherit: true,
-		basePower: 90,
+		basePower: 90
 	},
 	"icywind": {
 	      inherit: true,
@@ -50,7 +50,7 @@
 		defensiveCategory: "Special",
 		desc: "Physical But Deals Special Damage.",
 		shortDesc: "Physical but hits on special defense.",
-		secondary: false,
+		secondary: false
 	}
 };  
  
