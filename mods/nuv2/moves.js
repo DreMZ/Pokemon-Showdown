@@ -18,7 +18,7 @@
         }
     },
         
-      	lunardance: {
+      	"lunardance": {
 		num: 461,
 		accuracy: true,
 		basePower: 0,
@@ -34,10 +34,6 @@
 			boosts: {
 			spa: 1,
 			spe: 1
-	},
-		secondary: false,
-		target: "self",
-		type: "Psychic"
 	},
    
         "airslash": {
