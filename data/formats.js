@@ -41,6 +41,19 @@
     ruleset: ['Pokemon', 'Standard', 'Team Preview'],
     banlist: ['Uber', 'Excadrill + Sand Rush', 'Trickster']
     },
+    dscap: {
+    	effectType: 'Format',
+    	section: 'Pokemon Mods',
+    	name: "DreServ CAP",
+    	mod: 'dscap',
+    	rated: true,
+    	challengeShow: true,
+    	searchShow: true,
+    	isTeambuilderFormat: true,
+    	debug: true,
+    	ruleset: ['Pokemon', 'Standard', 'Evasion Abilities Clause', 'Team Preview'],
+    	banlist: ['Uber', 'Soul Dew', 'Drizzle ++ Swift Swim']
+    },
 	randombattle: {
 		name: "Random Battle",
 		section: "Singles",
