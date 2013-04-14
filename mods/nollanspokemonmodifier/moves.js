@@ -549,6 +549,27 @@ exports.BattleMovedex = {
                 target: "normal",
                 type: "Ghost"
         },
+         "pillarsmash": {
+                num: 2005,
+                accuracy: 90,
+                basePower: 140,
+                category: "Physical",
+                desc: "Deals damage to one adjacent target and lowers the user's Attack by 2 stages.",
+                shortDesc: "Lowers the user's Atk by 2.",
+                id: "pillarsmash",
+                isViable: true,
+                name: "Pillar Smash",
+                pp: 5,
+                priority: 0,
+                self: {
+                        boosts: {
+                                atk: -2
+                        }
+                },
+                secondary: false,
+                target: "normal",
+                type: "Fighting"
+        },
         "toxic": {
                 inherit: true,
                 accuracy: 100
