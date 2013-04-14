@@ -9,8 +9,6 @@
                                 pokemon.cureStatus();
         }
     },
-        
-        
         "reckless": {
               inherit: true,
                 onBasePower: function(basePower, attacker, defender, move) {
@@ -19,8 +17,6 @@
                                 return basePower * 15/10;
         }
     },
-        
-        
         "telepathy": {
               inherit: true,
                 onSourceFaint: function(target, source, effect) {
