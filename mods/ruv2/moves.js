@@ -39,11 +39,11 @@
                 basePower: 90,
     },
     "psyshock": {
-	      inherit: true
+	      inherit: true,
 		basePower: 90,
 	},
 	"icywind": {
-	      inherit: true
+	      inherit: true,
 		accuracy: 100,
 		basePower: 90,
 		category: "Physical",
