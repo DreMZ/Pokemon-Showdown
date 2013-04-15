@@ -138,6 +138,7 @@ exports.BattleScripts = {
         
         this.data.Pokedex.darmanitan.types = ["Fire","Fighting"];
         this.data.Pokedex.darmanitan.abilities['1'] = 'Reckless';
+        this.data.Learnsets.darmanitan.learnset.submission = ['5L0'];
         
         this.data.Pokedex.cofagrigus.types = ["Ghost","Steel"];
         this.data.Learnsets.cofagrigus.learnset.flashcannon = ['5M'];
