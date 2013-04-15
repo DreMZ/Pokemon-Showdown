@@ -266,6 +266,26 @@
 		ruleset: ['Pokemon', 'Standard', 'Team Preview', 'Little Cup'],
 		banlist: ['Sonicboom', 'Dragon Rage', 'Berry Juice', 'Carvanha', 'Meditite', 'Gligar', 'Scyther', 'Sneasel', 'Tangela', 'Vulpix', 'Yanma', 'Soul Dew']
 	},
+	randomhaxmons: {
+		effectType: 'Format',
+		name: "Random Haxmons",
+		challengeShow: true,
+		canUseRandomTeam: true,
+		searchShow: true,
+		rated: true,
+		team: 'random',
+		ruleset: ['Hax Clause', 'Team Preview']
+	},
+	haxmons: {
+		effectType: 'Format',
+		name: "Haxmons",
+		challengeShow: true,
+
+		searchShow: true,
+		isTeambuilderFormat: true,
+		rated: true,
+		ruleset: ['Hax Clause', 'Team Preview']
+	},
 	customgame: {
 		name: "Custom Game",
 		section: "Singles",
@@ -1472,5 +1492,30 @@
 			}
 			return ["Your team must share a type."];
 		}
+	},
+	haxclause: {
+		effectType: 'Rule',
+		onStart: function() {
+			this.add('rule', 'Hax Clause');
+		},
+		onModifyMovePriority: -100,
+		onModifyMove: function(move) {
+			if (move.secondaries) {
+				for (var s = 0; s < move.secondaries.length; ++s) {
+				move.secondaries[s].chance = 100;
+				}
+			}
+			if (move.accuracy !== true && move.accuracy <= 99) {
+				move.accuracy = 0;
+				if (move.name.indexOf(' ') > -1) {
+					var moveName = move.name.split(' ');
+					moveName[1] = 'Miss';
+					move.name = moveName[0] + ' ' + moveName[1];
+					} else {
+					move.name = move.name.substr(0, move.name.length-2) + 'fail';
+					}
+				}
+			move.willCrit = true;
+			}
 	}
 };
