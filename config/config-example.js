@@ -237,9 +237,8 @@ exports.groups = {
 		rank: 1
 	},
 	' ': {
-		id: "Regular",
-		name: "Regular User",
-		root: true,
-		rank: 5
+		   ip: 's',
+		   alts: 's',
+		   rank: 0 
 	}
 };
