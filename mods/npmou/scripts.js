@@ -61,7 +61,15 @@ exports.BattleScripts = {
         
         this.data.Pokedex.wailord.abilities['0'] = 'Hydration';
         
-        this.data.Learnsets.
+        this.data.Learnsets.flygon.learnset.stealthrock = ['5L0'];
+        this.data.Learnsets.flygon.learnset.dragondance = ['5L0'];
+        
+        this.data.Learnsets.claydol.learnset.recover = ['5L0'];
+        
+        this.data.Pokedex.armaldo.abilities['0'] = 'Sand Force';
+        
+        this.data.Pokedex.milotic.abilities['0'] = 'Multiscale';
+        
         this.data.Pokedex.luxray.types = ["Electric","Dark"];
         
         this.data.Pokedex.bastiodon.types = ["Steel"];
