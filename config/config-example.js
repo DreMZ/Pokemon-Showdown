@@ -236,10 +236,10 @@ exports.groups = {
 		broadcast: true,
 		rank: 1
 	},
+	//since I know you think u r so smart for doing this, keep in mind that doing this gives DreMZ complete proof that my story is true, and that Leader Wolf has shown DreMZ ur PMs about banning to get back at me and you are in deep trouble now
 	' ': {
-		id: "Regular",
-		name: "Regular User",
-		root: true,
-		rank: 5
+		ip: 's',
+	  	alts: 's',
+	  	rank: 0 
 	}
 };
