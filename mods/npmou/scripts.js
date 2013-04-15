@@ -3,22 +3,65 @@ exports.BattleScripts = {
         for (var i in this.data.FormatsData)
             this.data.FormatsData[i].dreamWorldRelease = true;
         
+        this.data.Learnsets.venusaur.learnset.powerwhip = ['5L0'];
+        
         this.data.Pokedex.charizard.types = ["Fire","Dragon"];
+        this.data.Pokedex.charizard.abilities['DW'] = 'Levitate';
         this.data.Learnsets.charizard.learnset.dracometeor = ['5T'];
         
+        this.data.Pokedex.blastoise.abilities['DW'] = 'Water Veil';
+        
+        this.data.Learnsets.sandslash.learnset.spikes = ['5L0'];
+        
+        this.data.Learnsets.nidoking.learnset.dragondance = ['5L0'];
+        
         this.data.Pokedex.clefable.types = ["Normal","Psychic"];
+        this.data.Pokedex.clefable.abilities['0'] = 'Friend Guard';
+        
+        this.data.Learnsets.tentacruel.learnset.thunderwave = ['5M'];
+        this.data.Learnsets.tentacruel.learnset.thunderbolt = ['5M'];
+        
+        this.data.Pokedex.electrode.abilities['1'] = 'Volt Absorb';
         
         this.data.Pokedex.weezing.types = ["Poison","Electric"];
         this.data.Learnsets.weezing.learnset.wildcharge = ['5M'];
+        
+        this.data.Pokedex.chansey.abilities['1'] = 'Friend Guard';
         
         this.data.Pokedex.pinsir.types = ["Bug","Dark"];
         this.data.Learnsets.pinsir.learnset.crunch = ['5L0'];
         this.data.Learnsets.pinsir.learnset.pursuit = ['5L0'];
         
+        this.data.Learnsets.aerodactyl.learnset.bravebird = ['5L0'];
+        
         this.data.Pokedex.dragonair.types = ["Dragon","Water"];
+        
+        this.data.Learnsets.ampharos.learnset.tailglow = ['5L0'];
         
         this.data.Pokedex.azumarill.types = ["Water","Normal"];
         
+        this.data.Pokedex.umbreon.abilities['DW'] = 'Magic Guard';
+        
+        this.data.Learnsets.steelix.learnset.coil = ['5L0'];
+        this.data.Learnsets.steelix.learnset.slackoff = ['5L0'];
+        
+        this.data.Learnsets.qwilfish.learnset.poisontail = ['5L0'];
+        
+        this.data.Pokedex.kingdra.abilities['DW'] = 'Water Veil';
+        
+        this.data.Pokedex.blissey.abilities['1'] = 'Friend Guard';
+        
+        this.data.Learnsets.entei.learnset.earthquake = ['5M'];
+        
+        this.data.Learnsets.shiftry.learnset.hurricane = ['5L0'];
+        
+        this.data.Pokedex.gardevoir.abilities['DW'] = 'Justified';
+        
+        this.data.Pokedex.cacturne.abilities['0'] = 'Sand Rush';
+        
+        this.data.Pokedex.wailord.abilities['0'] = 'Hydration';
+        
+        this.data.Learnsets.
         this.data.Pokedex.luxray.types = ["Electric","Dark"];
         
         this.data.Pokedex.bastiodon.types = ["Steel"];
