@@ -274,7 +274,7 @@
 		searchShow: true,
 		rated: true,
 		team: 'random',
-		ruleset: ['Hax Clause', 'Team Preview']
+		ruleset: ['Hax Clause', 'Team Preview', 'Standard']
 	},
 	haxmons: {
 		effectType: 'Format',
@@ -285,30 +285,7 @@
 		isTeambuilderFormat: true,
 		rated: true,
 		ruleset: ['Hax Clause', 'Team Preview']
-	},
-	customgame: {
-		name: "Custom Game",
-		section: "Singles",
-
-		effectType: 'Format',
-		challengeShow: true,
-		canUseRandomTeam: true,
-		debug: true,
-		maxLevel: 1000,
-		// no restrictions, for serious
-		ruleset: ['Team Preview']
-	},
-	customgamenoteampreview: {
-		name: "Custom Game (no Team Preview)",
-		section: "Singles",
-
-		effectType: 'Format',
-		challengeShow: true,
-		canUseRandomTeam: true,
-		debug: true,
-		maxLevel: 1000,
-		// no restrictions, for serious
-		ruleset: []
+		banlist: ['Kings Rock', 'Focus Band', 'Quick Claw', 'Razor Fang', 'BrightPowder', 'Lax Incense', 'Acupressure']
 	},
 	vgcsingles: {
 		effectType: 'Format',
@@ -357,7 +334,30 @@
 			'Genesect'
 		]
 	},
+		customgame: {
+		name: "Custom Game",
+		section: "Singles",
 
+		effectType: 'Format',
+		challengeShow: true,
+		canUseRandomTeam: true,
+		debug: true,
+		maxLevel: 1000,
+		// no restrictions, for serious
+		ruleset: ['Team Preview']
+	},
+	customgamenoteampreview: {
+		name: "Custom Game (no Team Preview)",
+		section: "Singles",
+
+		effectType: 'Format',
+		challengeShow: true,
+		canUseRandomTeam: true,
+		debug: true,
+		maxLevel: 1000,
+		// no restrictions, for serious
+		ruleset: []
+	},
 	// Doubles
 	///////////////////////////////////////////////////////////////////
 
