@@ -19,7 +19,6 @@
     	effectType: 'Format',
     	section: 'Pokemon Mods',
     	name: "DreServ CAP",
-    	mod: 'dscap',
     	rated: true,
     	challengeShow: true,
     	searchShow: true,
@@ -154,7 +153,7 @@
 	 	searchShow: true,
 		isTeambuilderFormat: true,
 		ruleset: ['CAP Pokemon', 'Standard', 'Evasion Abilities Clause', 'Team Preview'],
-		banlist: ['Uber', 'Drizzle ++ Swift Swim', 'Soul Dew']
+		banlist: ['Uber', 'Drizzle ++ Swift Swim', 'Soul Dew', 'Electrokan']
 	},
 	// capaurumothplaytest: {
 	// 	effectType: 'Format',
