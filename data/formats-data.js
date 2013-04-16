@@ -3,6 +3,12 @@ exports.BattleFormatsData = {
 		isNonstandard: true,
 		tier: ""
 	},
+	electrokan: {
+                viableMoves: {"wildcharge":1,"hijumpkick":1,"superpower":1,"thunderpunch":1,"stoneedge":1,"acrobatics":1,"bulkup":1,"substitute":1,"focuspunch":1,"machpunch":1,"drainpunch":1},
+                isNonstandard: true,
+                dreamWorldRelease: true,
+                tier: "DSCAP"
+        },
 	tomohawk: {
 		viableMoves: {"aurasphere":1,"roost":1,"stealthrock":1,"rapidspin":1,"hurricane":1,"airslash":1,"taunt":1,"substitute":1,"toxic":1},
 		isNonstandard: true,
