@@ -283,7 +283,7 @@
 		searchShow: true,
 		isTeambuilderFormat: true,
 		rated: true,
-		ruleset: ['Hax Clause', 'Team Preview']
+		ruleset: ['Hax Clause', 'Team Preview'],
 		banlist: ['Kings Rock', 'Focus Band', 'Quick Claw', 'Razor Fang', 'BrightPowder', 'Lax Incense', 'Acupressure']
 	},
 	vgcsingles: {
