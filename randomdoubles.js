@@ -13,13 +13,28 @@
                 var mustHaveBlizzard = {
                 abomasnow:1,
                 };
+                var mustHaveBugBuzz = {
+                accelgor:1,
+                };
+                var mustHaveFinalGambit = {
+                accelgor:1,
+                };
+                var mustHaveRockSlide = {
+                aerodactyl:1,
+                };
+                var mustHaveReturn = {
+                aipom:1, ambipom:1,
+                };
+                var mustHaveFakeOut = {
+                aipom:1, ambipom:1,
+                };
                 for (var i=0; i<6; i++) {
                         var pokemon = seasonalPokemonList[i];
                         var template = this.getTemplate(pokemon);
                         var set = this.randomSet(template, i);
                         
                         if (template.id === 'abomasnow') {
-                                var items = ['Ice Gem', 'Focus Sash']
+                                var items = ['Ice Gem', 'Focus Sash'];
                                 items = items.randomize();
                                 set.evs = {hp: 252, def: 4, spd: 0, spa: 252, atk: 0, spe: 0};
                                 set.ability = 'Snow Warning';
@@ -30,6 +45,72 @@
                                 template.viableMoves.protect = 1;
                                 template.viableMoves.lightscreen = 1;
                                 template.viableMoves.icywind = 1;
+                        } else if (template.id === 'accelgor') {
+                                set.item = 'Bug Gem';
+                                set.evs = {hp: 252, def: 0, spd: 0, spa: 220, atk: 0, spe: 36};
+                                set.ability = 'Unburden';
+                                set.nature = 'Timid';
+                                delete template.viableMoves.focusblast;
+                                delete template.viableMoves.gigadrain;
+                                delete template.viableMoves.yawn;
+                                delete template.viableMoves.spikes;
+                                template.viableMoves.finalgambit = 1;
+                                template.viableMoves.protect = 1;
+                                template.viableMoves.raindance = 1;
+                                template.viableMoves.acidspray = 1;
+                        } else if (template.id === 'aerodactyl') {
+                                var items = ['Focus Sash', 'Rock Gem'];
+                                items = items.randomize();
+                                set.evs = {hp: 4, def: 0, spd: 0, spa: 0, atk: 252, spe: 252};
+                                set.ability = 'Unnerve';
+                                set.nature = 'Jolly';
+                                delete template.viableMoves.aquatail;
+                                delete template.viableMoves.firefang;
+                                delete template.viableMoves.roost;
+                                delete template.viableMoves.stealthrock;
+                                delete template.viableMoves.stoneedge;
+                                template.viableMoves.skydrop = 1;
+                                template.viableMoves.tailwind = 1;
+                                template.viableMoves.protect = 1;
+                        } else if (template.id === 'aipom') {
+                                var items = ['Normal Gem', 'Focus Sash', 'Eviolite'];
+                                items = items.randomize();
+                                set.evs = {hp: 4, def: 0, spd: 0, spa: 0, atk: 252, spe: 252};
+                                set.ability = 'Skill Link';
+                                set.nature = 'Jolly';
+                                delete template.viableMoves.brickbreak;
+                                delete template.viableMoves.seedbomb;
+                                delete template.viableMoves.shadowclaw;
+                                delete template.viableMoves.uturn;
+                                template.viableMoves.beatup = 1;
+                                template.viableMoves.protect = 1;
+                                template.viableMoves.thunderwave = 1;
+                                template.viableMoves.acrobatics = 1;
+                        } else if (template.id === 'alakazam') {
+                                var items = ['Life Orb', 'Focus Sash'];
+                                items = items.randomize();
+                                set.evs = {hp: 4, def: 0, spd: 0, spa: 252, atk: 0, spe: 252};
+                                set.ability = 'Magic Guard';
+                                set.nature = 'Timid';
+                                delete template.viableMoves.calmmind;
+                                delete template.viableMoves.encore;
+                                delete template.viableMoves.substitute;
+                                template.viableMoves.protect = 1;
+                        } else if (template.id === 'ambipom') {
+                                var items = ['Normal Gem', 'Life Orb'];
+                                items = items.randomize();
+                                set.evs = {hp: 4, def: 0, spd: 0, spa: 0, atk: 252, spe: 252};
+                                set.ability = 'Technician';
+                                set.nature = 'Jolly';
+                                delete template.viableMoves.lowsweep;
+                                delete template.viableMoves.payback;
+                                delete template.viableMoves.seedbomb;
+                                delete template.viableMoves.switcheroo;
+                                delete template.viableMoves.uturn;
+                                template.viableMoves.beatup = 1;
+                                template.viableMoves.lowkick = 1;
+                                template.viableMoves.acrobatics = 1;
+                                template.viableMoves.protect = 1;
                         } else if (template.id === 'chandelure') {
                                 var items = ['Fire Gem', 'Shuca Berry'];
                                 items = items.randomize();
