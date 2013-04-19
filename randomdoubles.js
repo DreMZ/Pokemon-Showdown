@@ -8,7 +8,7 @@
                 hitmontop:1,
                 };
                 var mustHaveHeatWave = {
-                chandelure:1,
+                chandelure:1, arceus-fire:1,
                 };
                 var mustHaveBlizzard = {
                 abomasnow:1,
@@ -27,6 +27,12 @@
                 };
                 var mustHaveFakeOut = {
                 aipom:1, ambipom:1,
+                };
+                var mustHaveGigaDrain = {
+                amoonguss: 1,
+                };
+                var mustHaveJudgement = {
+                arceus-electric:1,
                 };
                 for (var i=0; i<6; i++) {
                         var pokemon = seasonalPokemonList[i];
@@ -111,6 +117,68 @@
                                 template.viableMoves.lowkick = 1;
                                 template.viableMoves.acrobatics = 1;
                                 template.viableMoves.protect = 1;
+                        } else if (template.id === 'amoonguss') {
+                                var items = ['Black Slude', 'Sitrus Berry'];
+                                items = items.randomize();
+                                set.evs = {hp: 252, def: 0, spd: 252, spa: 4, atk: 0, spe: 0};
+                                set.ability = 'Effect Spore';
+                                set.nature = 'Sassy';
+                                delete template.viableMoves.clearsmog;
+                                delete template.viableMoves.synthesis;
+                                template.viableMoves.ragepowder = 1;
+                                template.viableMoves.protect = 1;
+                        } else if (template.id === 'arcanine') {
+                                var items = ['Fire Gem', 'Life Orb'];
+                                items = items.randomize();
+                                set.evs = {hp: 4, def: 0, spd: 0, spa: 0, atk: 252, spe: 252};
+                                var abilities = ['Intimidate', 'Justified'];
+                                abilities = abilities.randomize();
+                                set.nature = 'Adamant';
+                                delete template.viableMoves.morningsun;
+                                delete template.viableMoves.willowisp;
+                                template.viableMoves.protect = 1;
+                        } else if (template.id === 'arceus-dragon') {
+                                set.item = 'Draco Plate';
+                                set.evs = {hp: 4, def: 0, spd: 0, spa: 252, atk: 0, spe: 252};
+                                set.ability = 'Multitype';
+                                set.nature = 'Timid';
+                                delete template.viableMoves.outrage;
+                                delete template.viableMoves.extremespeed;
+                                delete template.viableMoves.earthquake;
+                                delete template.viableMoves.recover;
+                                delete template.viableMoves.swordsdance;
+                                template.viableMoves.dragonpulse = 1;
+                                template.viableMoves.dracometeor = 1;
+                                template.viableMoves.heatwave = 1;
+                                template.viableMoves.tailwind = 1;
+                                template.viableMoves.protect = 1;
+                                template.viableMoves.icywind = 1;
+                        } else if (template.id === 'arceus-electric') {
+                                set.item = 'Zap Plate';
+                                set.evs = {hp: 4, def: 0, spd: 0, spa: 252, atk: 0, spe: 252};
+                                set.ability = 'Multitype';
+                                set.nature = 'Timid';
+                                delete template.viableMoves.calmmind;
+                                delete template.viableMoves.recover;
+                                delete template.viableMoves.icebeam;
+                                template.viableMoves.heatwave = 1;
+                                template.viableMoves.icywind = 1;
+                                template.viableMoves.surf = 1;
+                                template.viableMoves.tailwind = 1;
+                                template.viableMoves.protect = 1;
+                        } else if (template.id === 'arceus-fire') {
+                                set.item = 'Flame Plate';
+                                set.evs = {hp: 4, def: 0, spd: 0, spa: 252, atk: 0, spe: 252};
+                                set.ability = 'Multitype';
+                                set.nature = 'Timid';
+                                delete template.viableMoves.flamethrower;
+                                delete template.viableMoves.fireblast;
+                                delete template.viableMoves.recover;
+                                delete template.viableMoves.calmmind;
+                                template.viableMoves.heatwave = 1;
+                                template.viableMoves.icywind = 1;
+                                template.viableMoves.tailwind = 1;
+                                template.viableMoves.protect = 1;
                         } else if (template.id === 'chandelure') {
                                 var items = ['Fire Gem', 'Shuca Berry'];
                                 items = items.randomize();
@@ -133,7 +201,6 @@
                                 set.nature = 'Adamant';
                                 delete template.viableMoves.toxic;
                                 delete template.viableMoves.rapidspin;
-                                delete template.viableMoves.machpunch;
                                 template.viableMoves.protect = 1;
                                 template.viableMoves.fakeout = 1;
                                 template.viableMoves.rockslide = 1;
