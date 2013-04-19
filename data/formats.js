@@ -286,6 +286,31 @@
 		ruleset: ['Hax Clause', 'Team Preview'],
 		banlist: ['Kings Rock', 'Focus Band', 'Quick Claw', 'Razor Fang', 'BrightPowder', 'Lax Incense', 'Acupressure']
 	},
+	colormodou: {
+		name: "ColorMod",
+		section: "Singles",
+		mod: 'colormod',
+		effectType: 'Format',
+		challengeDefault: true,
+		rated: true,
+		challengeShow: true,
+		searchShow: true,
+		isTeambuilderFormat: true,
+		ruleset: ['Pokemon', 'Standard', 'Evasion Abilities Clause', 'Team Preview'],
+		banlist: ['Uber', 'Drizzle ++ Swift Swim', 'Soul Dew']
+	},
+	colormodubers: {
+		name: "ColorMod Ubers",
+		section: "Singles",
+		mod: 'colormod',
+		effectType: 'Format',
+		rated: true,
+		challengeShow: true,
+		// searchShow: true,
+		isTeambuilderFormat: true,
+		ruleset: ['Pokemon', 'Team Preview', 'Standard Ubers'],
+		banlist: []
+	},
 	vgcsingles: {
 		effectType: 'Format',
 		section: 'Singles',
