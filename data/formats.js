@@ -751,6 +751,40 @@
 		},
 		ruleset: ['PotD', 'Pokemon', 'Sleep Clause']
 	},*/
+	seasonalfourthofjulyfestival: {
+		name: "[Seasonal] Fourth of July Festival",
+		section: 'Other Metagames',
+		
+		effectType: 'Format',
+		teamL 'randomSeasonalUSA',
+		canUseRandomTeam: true,
+		rated: true,
+		challengeShow: true,
+		searchShow: true,
+		onBegin: function() {
+			var dice = this.random(100);
+			if (dice < 50) {
+				this.add('-message', "It\'s raining, it\'s pouring, I just got hit by Thunder...");
+				this.setWeather('Rain Dance');
+			} else if (dice > 50) {
+				this.add('-message', "What a wonderful summer day!");
+				this.setWeather('Sunny Day');
+			}
+			delete this.weatherData.duration;
+		},
+		if (move.id === 'taunt') {
+			var quotes = [
+				"COME AT ME BRO!!!",
+				"Do you even lift?"
+			];
+		 } else if (move.id === 'swift') {
+		 	onHit: function(target) {
+		 		target.addVolatile('confusion');
+		 		this.add('-message', 'The foe was blinded by the fireworks.');
+		 	},
+		 }
+		 ruleset: ['PotD', 'Pokemon', 'Sleep Clause']
+	},
 	seasonalfoolsfestival: {
 		name: "[Seasonal] Fools Festival",
 		section: 'Other Metagames',
