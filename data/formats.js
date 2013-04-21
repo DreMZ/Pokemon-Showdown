@@ -756,7 +756,7 @@
 		section: 'Other Metagames',
 		
 		effectType: 'Format',
-		teamL 'randomSeasonalUSA',
+		team: 'randomSeasonalUSA',
 		canUseRandomTeam: true,
 		rated: true,
 		challengeShow: true,
