@@ -26,32 +26,6 @@
     	ruleset: ['CAP Pokemon', 'Standard', 'Evasion Abilities Clause', 'Team Preview'],
     	banlist: ['Uber', 'Soul Dew', 'Drizzle ++ Swift Swim', 'G4CAP', 'Tomohawk', 'Necturna', 'Mollux', 'Aurumoth']
     },
-    nuv2: {
-       	effectType: 'Format',
-      	section: 'Pokemon Mods',
-        name: "nuv2",
-        mod: 'nuv2',
-        challengeShow: true,
-        searchShow: true,
-        isTeambuilderFormat: true,
-        rated: true,
-        debug: true,
-        ruleset: ['Pokemon', 'Standard', 'Evasion Abilities Clause', 'Team Preview','Sleep Clause'],
-        banlist: ['RU','UU','Uber','OU', 'Beheeyem', 'Braviary', 'Gardevoir', 'Musharna', 'Luxray', 'Roselia', 'Drizzle', 'Drought', 'Sand Rush + Torterra + Shell Smash']
-    },
-    	ruv2: {
-                effectType: 'Format',
-                section:'Pokemon Mods',
-                name: "ruv2",
-                mod: 'ruv2',
-                challengeShow: true,
-                searchShow: true,
-                isTeambuilderFormat: true,
-                rated: true,
-                debug: true,
-                ruleset: ['Pokemon', 'Standard', 'Evasion Abilities Clause', 'Team Preview','Sleep Clause'],
-                banlist: ['BL2', 'Abomasnow', 'Ambipom', 'Arcanine', 'Archeops', 'Azelf', 'Azumarill', 'Beheeyem', 'Bisharp', 'Blastoise', 'Bronzong', 'Chandelure', 'Claydol', 'Cobalion', 'Cofagrigus', 'Crobat', 'Dusclops', 'Empoleon', 'Flygon', 'Froslass', 'Heracross', 'Hitmontop', 'Honchkrow', 'Houndoom', 'Kingdra', 'Krookodile', 'Meloetta', 'Machamp', 'Mew', 'Mienshao', 'Milotic', 'Mismagius', 'Nidoking', 'Porygon-Z', 'Porygon2', 'Raikou', 'Registeel', 'Rhyperior', 'Roserade', 'Rotom-Heat', 'Sableye', 'Scrafty', 'Sharpedo', 'Shaymin', 'Slowbro', 'Snorlax', 'Suicune', 'Swampert', 'Togekiss', 'Tornadus', 'Umbreon', 'Victini', 'Virizion', 'Weavile', 'Xatu', 'Yanmega', 'Zapdos', 'Zoroark', 'Shell Smash + Baton Pass', 'BL1', 'OU','Uber'],
-        }, 
 	randombattle: {
 		name: "Random Battle",
 		section: "Singles",
@@ -298,18 +272,6 @@
 		isTeambuilderFormat: true,
 		ruleset: ['Pokemon', 'Standard', 'Evasion Abilities Clause', 'Team Preview'],
 		banlist: ['Uber', 'Drizzle ++ Swift Swim', 'Soul Dew']
-	},
-	colormodubers: {
-		name: "ColorMod Ubers",
-		section: "Singles",
-		mod: 'colormod',
-		effectType: 'Format',
-		rated: true,
-		challengeShow: true,
-		// searchShow: true,
-		isTeambuilderFormat: true,
-		ruleset: ['Pokemon', 'Team Preview', 'Standard Ubers'],
-		banlist: []
 	},
 	vgcsingles: {
 		effectType: 'Format',
@@ -775,14 +737,18 @@
 		if (move.id === 'taunt') {
 			var quotes = [
 				"COME AT ME BRO!!!",
-				"Do you even lift?"
+				"Bro, do you even lift?"
 			];
 		 } else if (move.id === 'swift') {
 		 	onHit: function(target) {
 		 		target.addVolatile('confusion');
 		 		this.add('-message', 'The foe was blinded by the fireworks.');
 		 	},
-		 }
+		 } else if (set.ability === 'Sniper') {
+		 	onStart: function(source) {
+         		source.addVolatile('focusenergy');
+      			}
+		 } 
 		 ruleset: ['PotD', 'Pokemon', 'Sleep Clause']
 	},
 	seasonalfoolsfestival: {
