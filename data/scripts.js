@@ -1440,7 +1440,7 @@ exports.BattleScripts = {
 		return team;
 	},
 	randomSeasonalUSATeam: function(side) {
-		//This is pretty big brace urselves
+		//This is a pretty big list brace urselves
 		var seasonalPokemonList = ['braviary', 'ludicolo', 'bellossom', 'exeggutor', 'beartic', 'kingdra'];
 		seasonalPokemonList = seasonalPokemonList.randomize();
 		//Braviary must be Shiny
@@ -1448,35 +1448,35 @@ exports.BattleScripts = {
 			braviary:1
 		};
 		//Pokemon with Sniper must have Sniper
-		var sniperPokemon = {kingdra};
+		var sniperPokemon = {kingdra:1};
 		var team = [];
 		//Now for the making of the team :>
 		for (var i=0; i<6; i++) {
 			var pokemon = seasonalPokemonList[i];
 			var template = this.getTemplate(pokemon);
 			var set = this.randomSet(template, i);
-			//Giving those in sniperPokemon lisr Sniper
+			//Braviary will be in slot two of every team, this one line may not work properly, just a heads up
+			set.template.id[2] = 'Braviary';
+			//Giving those in sniperPokemon list Sniper
 			if (template.id in sniperPokemon) {
 				set.ability = 'Sniper';
 			}
-			// These Pokemon must always be shiny to be green
+			// The bald eagle must take its shiny Red, White, and Blue colors
 			if (template.id in mustBeShiny) {
 				set.shiny = true;
 			}
-			//Sniper pokemon will be buffed via Focus Energy on the switch in
-			onStart: function(source) {
-				if (set.ability === 'Sniper') {
-					source.addVolatile('focusenergy');
-				}
-			}
-			//The Bald Eagle becomes mighty
+			//The Bald Eagle becomes all-mighty
 			if (template.id === 'Braviary') {
 				set.level = 125;
 				set.moves = ['Slash', 'Brave Bird', 'Swift', 'Roost'];
 				set.ability = 'Sniper';
-				set.evs = {hp: 252, def: 252, spd: 252, spa: 252, atk: 252, spe: 252};
+				set.evs = {hp: 252, def: 0, spd: 0, spa: 4, atk: 252, spe: 0};
 				set.nature = 'Brave';
-			}
+			} else {
+				set.level = 100;
+				team.push(set);
+		}
+		return team;
 	},	
 	randomSeasonalSFTeam: function(side) {
 		// This is the huge list of all the Pokemon in this seasonal
