@@ -1468,13 +1468,21 @@ exports.BattleScripts = {
 			//The Bald Eagle becomes all-mighty
 			if (template.id === 'Braviary') {
 				set.level = 125;
-				set.moves = ['Slash', 'Brave Bird', 'Swift', 'Roost'];
+				set.item = 'Scope Lens';
+				set.moves = ['Brave Bird', 'Slash', 'Swift', 'Roost'];
 				set.ability = 'Sniper';
 				set.evs = {hp: 252, def: 0, spd: 0, spa: 4, atk: 252, spe: 0};
 				set.nature = 'Brave';
-			} else {
-				set.level = 100;
+			//Sneasel gets a special bad-guy niche, as Weavile is not allowed due to Nasty Plot access
+			} else if (template.id === 'Sneasel') {
+				set.level = 125;
+				set.item = 'Ice Gem';
+				set.moves = ['Thief', 'Ice Shard', 'Low Sweep', 'Fake Out'];
+				set.ability = 'Technician';
+				set.evs = {hp: 4, def: 0, spd: 0, spa: 0, atk: 252, spe: 252};
+				set.nature = 'Naughty';
 				team.push(set);
+			}
 		}
 		return team;
 	},	
