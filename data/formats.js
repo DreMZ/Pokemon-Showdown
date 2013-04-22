@@ -259,20 +259,6 @@
 		rated: true,
 		ruleset: ['Hax Clause', 'Team Preview'],
 		banlist: ['Kings Rock', 'Focus Band', 'Quick Claw', 'Razor Fang', 'BrightPowder', 'Lax Incense', 'Acupressure']
-	},
-	colormodou: {
-		name: "ColorMod",
-		section: "Singles",
-		mod: 'colormod',
-		effectType: 'Format',
-		challengeDefault: true,
-		rated: true,
-		challengeShow: true,
-		searchShow: true,
-		isTeambuilderFormat: true,
-		ruleset: ['Pokemon', 'Standard', 'Evasion Abilities Clause', 'Team Preview'],
-		banlist: ['Uber', 'Drizzle ++ Swift Swim', 'Soul Dew']
-	},
 	vgcsingles: {
 		effectType: 'Format',
 		section: 'Singles',
@@ -734,21 +720,93 @@
 			}
 			delete this.weatherData.duration;
 		},
-		if (move.id === 'taunt') {
+		onModifyMove: function(move) {
+			if (move.id === 'taunt') {
 			var quotes = [
 				"COME AT ME BRO!!!",
 				"Bro, do you even lift?"
-			];
-		 } else if (move.id === 'swift') {
-		 	onHit: function(target) {
+				];
+		 	} else if (move.id === 'swift') {
+		 		onHit: function(target) {
 		 		target.addVolatile('confusion');
 		 		this.add('-message', 'The foe was blinded by the fireworks.');
-		 	},
-		 } else if (set.ability === 'Sniper') {
-		 	onStart: function(source) {
-         		source.addVolatile('focusenergy');
-      			}
-		 } 
+		 		}
+		 	} else if (move.id === 'explosion') {
+		 		move.category = 'Physical';
+				move.type = 'Fire';
+				move.basePower = 120;
+				move.accuracy = 100;
+				move.onHit = function (target, source) {
+					this.add('-message', target.name + "had its type changed by the colorful fireworks!");
+				}
+				move.onHit: function(target) {
+					var possibleTypes = target.moveset.map(function(val){
+						var move = this.getMove(val.id);
+						if (move.id !== 'conversion' && !target.hasType(move.type)) {
+							return move.type;
+						}
+					}, this).compact();
+					if (!possibleTypes.length) {
+						this.add('-fail', target);
+						return false;
+					}
+					var type = possibleTypes[this.random(possibleTypes.length)];
+					this.add('-start', target, 'typechange', type);
+					target.types = [type];
+				}
+		 	} else if (move.id === 'selfdestruct') {
+		 		move.category = 'Physical';
+				move.type = 'Fire';
+				move.basePower = 100;
+				move.accuracy = 100;
+				move.onHit = function (target, source) {
+					this.add('-message', target.name + " had its type changed by the pretty fireworks!");
+				}
+				move.onHit: function(target) {
+					var possibleTypes = target.moveset.map(function(val){
+						var move = this.getMove(val.id);
+						if (move.id !== 'conversion' && !target.hasType(move.type)) {
+							return move.type;
+						}
+					}, this).compact();
+					if (!possibleTypes.length) {
+						this.add('-fail', target);
+						return false;
+					}
+					var type = possibleTypes[this.random(possibleTypes.length)];
+					this.add('-start', target, 'typechange', type);
+					target.types = [type];
+				}
+		 	} else if (move.id === 'thief') {
+		 		move.category = 'Physical';
+				move.type = 'Dark';
+				move.basePower = 150;
+				move.accuracy = 100;
+				move.onHit = function (target, source) {
+					if (source.item) {
+					return;
+				}
+				var yourItem = target.takeItem(source);
+				if (!yourItem) {
+					return;
+				}
+				if (!source.setItem(yourItem)) {
+					target.item = yourItem.id; // bypass setItem so we don't break choicelock or anything
+					return;
+				}
+				this.add('-item', source, yourItem, '[from] move: Thief', '[of] '+target);
+				this.add('-message', source.name + " was chased down by the cops, and was injured by gunfire.");
+				this.damage(source.maxhp/4);
+				}
+		 	}
+		 }
+		 onModifyAbility: function(ability) {
+		 	if (set.ability === 'Sniper') {
+		 			onStart: function(source) {
+         				source.addVolatile('focusenergy');
+		 			}
+		 	}
+		 }
 		 ruleset: ['PotD', 'Pokemon', 'Sleep Clause']
 	},
 	seasonalfoolsfestival: {
